@@ -9,16 +9,9 @@ body,
 html {
   overflow-x: hidden;
   font-family: $i;
-  &.overflow {
-    overflow: hidden;
-  }
-}
-
-body,
-html {
   overflow: hidden;
-  &.remove {
-    overflow: visible;
+  &.overflow {
+    overflow: hidden !important;
   }
 }
 

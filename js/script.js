@@ -128,7 +128,7 @@ $(document).ready(function () {
 
   $(".okey").on("click", function () {
     $(".fixed-block").addClass("hide");
-    $("body, html").addClass("remove");
+    $("body, html").css({ overflow: "visible" });
   });
 
   AOS.init();

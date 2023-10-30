@@ -861,6 +861,8 @@
 
 .apartment-search {
   margin-top: 80px;
+  position: relative;
+  z-index: 0;
   .wrapper {
     .apartment-search-info {
       @include flex;

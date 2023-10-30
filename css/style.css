@@ -2,19 +2,11 @@ body,
 html {
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
+  overflow: hidden;
 }
 body.overflow,
 html.overflow {
-  overflow: hidden;
-}
-
-body,
-html {
-  overflow: hidden;
-}
-body.remove,
-html.remove {
-  overflow: visible;
+  overflow: hidden !important;
 }
 
 * {
@@ -1856,6 +1848,8 @@ a:focus {
 
 .apartment-search {
   margin-top: 80px;
+  position: relative;
+  z-index: 0;
 }
 .apartment-search .wrapper .apartment-search-info {
   display: -webkit-box;
