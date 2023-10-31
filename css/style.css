@@ -1571,8 +1571,8 @@ a:focus {
 .info-block .wrapper .info-slider .item:hover .text-wrap b:after {
   width: 100%;
 }
-.info-block .wrapper .info-slider .item:hover .img-wrap img {
-  transform: scale(1.02);
+.info-block .wrapper .info-slider .item:hover .img-wrap {
+  border-color: rgba(18, 192, 91, 0.46);
 }
 .info-block .wrapper .info-slider .item .text-wrap {
   width: 60%;
@@ -1623,6 +1623,7 @@ a:focus {
   position: relative;
   z-index: 0;
   width: 40%;
+  transition: 0.3s;
   border: 24px solid #eeeeee;
   border-bottom: 0;
 }

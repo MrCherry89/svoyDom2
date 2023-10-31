@@ -616,9 +616,7 @@
             }
           }
           .img-wrap {
-            img {
-              transform: scale(1.02);
-            }
+            border-color: rgba(#12c05b, 0.46);
           }
         }
         .text-wrap {
@@ -664,6 +662,7 @@
           position: relative;
           z-index: 0;
           width: 40%;
+          transition: 0.3s;
           border: 24px solid #eeeeee;
           border-bottom: 0;
           @media (max-width: 767px) {
