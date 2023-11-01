@@ -296,6 +296,7 @@ a {
   background: white;
   border-radius: 10px;
   padding: 20px 0;
+  margin-top: 10px;
   transition: 0s;
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
   -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
@@ -441,16 +442,19 @@ a {
       @include flex;
       @include align-center;
       color: #141414;
+      font-size: 17px;
       sup {
         margin-top: -10px;
       }
       input {
         color: #141414;
         margin: 0 5px;
-        width: 28px;
+        width: 29px;
         text-align: center;
+        font-size: 16px;
         @include placeholder {
           color: #141414;
+          font-size: 16px;
         }
       }
     }
@@ -527,7 +531,7 @@ a {
           @include dir-col;
           align-items: flex-start;
           padding: 20px;
-          padding-bottom: 40px;
+          padding-bottom: 80px;
           transition: 0.3s;
           transform: translateY(-100%);
           visibility: hidden;
@@ -552,11 +556,6 @@ a {
             }
             @media (max-width: 1024px) {
               margin-bottom: 20px;
-            }
-            a {
-              @media (max-width: 1100px) {
-                font-size: 14px;
-              }
             }
             button {
               @media (max-width: 1100px) {

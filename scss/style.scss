@@ -260,11 +260,6 @@
         &:last-child {
           margin-bottom: 0;
         }
-        a {
-          @media (max-width: 767px) {
-            font-size: 14px;
-          }
-        }
       }
     }
     &:hover {
@@ -585,6 +580,9 @@
         @media (max-width: 767px) {
           margin-right: -15px;
         }
+        @media (max-width: 500px) {
+          margin: 0 -10px;
+        }
       }
       .item {
         margin: 0 8px;
@@ -606,6 +604,10 @@
           padding: 15px 0 0 15px;
           margin: 0;
           margin-left: 15px;
+        }
+        @media (max-width: 500px) {
+          width: auto;
+          margin: 0 10px;
         }
         &:hover {
           .text-wrap {
@@ -671,6 +673,9 @@
             height: 140px;
             border-right: 0;
             border-width: 44px;
+          }
+          @media (max-width: 500px) {
+            margin-top: auto;
           }
           img {
             position: absolute;
@@ -884,6 +889,13 @@
         &.full {
           min-width: 185px;
         }
+        .select2-container
+          .select2-selection--single
+          .select2-selection__rendered {
+          @media (max-width: 767px) {
+            font-size: 16px !important;
+          }
+        }
       }
       .range-info {
         @media (max-width: 767px) {
@@ -917,6 +929,9 @@
       padding: 0;
       padding-left: 20px;
     }
+    @media (max-width: 500px) {
+      padding: 0 20px;
+    }
   }
   .banner-slider {
     display: grid;
@@ -927,6 +942,11 @@
     }
     @media (max-width: 1024px) {
       display: block;
+    }
+    .slick-list {
+      @media (max-width: 500px) {
+        margin: 0 -10px;
+      }
     }
     .item {
       border-radius: 10px;
@@ -950,6 +970,10 @@
         padding: 20px;
         margin-left: 20px;
         align-items: flex-start;
+      }
+      @media (max-width: 500px) {
+        margin: 0 10px;
+        width: auto;
       }
       .texts {
         max-width: 160px;
@@ -1038,7 +1062,7 @@
 }
 
 .fixed-block {
-  background: rgba(black, 0.5);
+  background: rgba(black, 0.75);
   position: fixed;
   top: 0;
   left: 0;
@@ -1046,9 +1070,10 @@
   height: 100%;
   z-index: 100;
   @include flex;
+  padding: 0 20px;
   .info {
     margin: auto;
-    padding: 35px 40px;
+    padding: 35px 25px;
     border-radius: 10px;
     background: #e5f7ea;
     max-width: 500px;

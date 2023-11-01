@@ -312,6 +312,7 @@ a:focus {
   background: white;
   border-radius: 10px;
   padding: 20px 0;
+  margin-top: 10px;
   transition: 0s;
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
   -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
@@ -480,6 +481,7 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
   color: #141414;
+  font-size: 17px;
 }
 .range-info .inputs .input-wrap sup {
   margin-top: -10px;
@@ -487,20 +489,25 @@ a:focus {
 .range-info .inputs .input-wrap input {
   color: #141414;
   margin: 0 5px;
-  width: 28px;
+  width: 29px;
   text-align: center;
+  font-size: 16px;
 }
 .range-info .inputs .input-wrap input::-webkit-input-placeholder {
   color: #141414;
+  font-size: 16px;
 }
 .range-info .inputs .input-wrap input::-moz-placeholder {
   color: #141414;
+  font-size: 16px;
 }
 .range-info .inputs .input-wrap input:-ms-input-placeholder {
   color: #141414;
+  font-size: 16px;
 }
 .range-info .inputs .input-wrap input:-moz-placeholder {
   color: #141414;
+  font-size: 16px;
 }
 .range-info.full {
   min-width: 280px;
@@ -599,7 +606,7 @@ a:focus {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
     transition: 0.3s;
     transform: translateY(-100%);
     visibility: hidden;
@@ -635,11 +642,6 @@ a:focus {
 @media (max-width: 1024px) {
   .header .wrapper .header-info .menu-wrap .main-menu li {
     margin-bottom: 20px;
-  }
-}
-@media (max-width: 1100px) {
-  .header .wrapper .header-info .menu-wrap .main-menu li a {
-    font-size: 14px;
   }
 }
 @media (max-width: 1100px) {
@@ -1137,11 +1139,6 @@ a:focus {
 .main-menu > li .sub-menu li:last-child {
   margin-bottom: 0;
 }
-@media (max-width: 767px) {
-  .main-menu > li .sub-menu li a {
-    font-size: 14px;
-  }
-}
 .main-menu > li:hover button {
   color: #008b3b;
 }
@@ -1537,6 +1534,11 @@ a:focus {
     margin-right: -15px;
   }
 }
+@media (max-width: 500px) {
+  .info-block .wrapper .info-slider .slick-list {
+    margin: 0 -10px;
+  }
+}
 .info-block .wrapper .info-slider .item {
   margin: 0 8px;
   background: #f9f9f9;
@@ -1566,6 +1568,12 @@ a:focus {
     padding: 15px 0 0 15px;
     margin: 0;
     margin-left: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .info-block .wrapper .info-slider .item {
+    width: auto;
+    margin: 0 10px;
   }
 }
 .info-block .wrapper .info-slider .item:hover .text-wrap b:after {
@@ -1634,6 +1642,11 @@ a:focus {
     height: 140px;
     border-right: 0;
     border-width: 44px;
+  }
+}
+@media (max-width: 500px) {
+  .info-block .wrapper .info-slider .item .img-wrap {
+    margin-top: auto;
   }
 }
 .info-block .wrapper .info-slider .item .img-wrap img {
@@ -1886,6 +1899,11 @@ a:focus {
   min-width: 185px;
 }
 @media (max-width: 767px) {
+  .apartment-search .wrapper .apartment-search-info .select-wrap .select2-container .select2-selection--single .select2-selection__rendered {
+    font-size: 16px !important;
+  }
+}
+@media (max-width: 767px) {
   .apartment-search .wrapper .apartment-search-info .range-info {
     width: 100%;
     margin: 0;
@@ -1918,6 +1936,11 @@ a:focus {
     padding-left: 20px;
   }
 }
+@media (max-width: 500px) {
+  .banner-slider-wrap .wrapper {
+    padding: 0 20px;
+  }
+}
 .banner-slider-wrap .banner-slider {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1931,6 +1954,11 @@ a:focus {
 @media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider {
     display: block;
+  }
+}
+@media (max-width: 500px) {
+  .banner-slider-wrap .banner-slider .slick-list {
+    margin: 0 -10px;
   }
 }
 .banner-slider-wrap .banner-slider .item {
@@ -1963,6 +1991,12 @@ a:focus {
     padding: 20px;
     margin-left: 20px;
     align-items: flex-start;
+  }
+}
+@media (max-width: 500px) {
+  .banner-slider-wrap .banner-slider .item {
+    margin: 0 10px;
+    width: auto;
   }
 }
 .banner-slider-wrap .banner-slider .item .texts {
@@ -2055,7 +2089,7 @@ a:focus {
 }
 
 .fixed-block {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.75);
   position: fixed;
   top: 0;
   left: 0;
@@ -2065,10 +2099,11 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 20px;
 }
 .fixed-block .info {
   margin: auto;
-  padding: 35px 40px;
+  padding: 35px 25px;
   border-radius: 10px;
   background: #e5f7ea;
   max-width: 500px;

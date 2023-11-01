@@ -16,6 +16,16 @@ $(document).ready(function () {
           slidesToShow: 1,
         },
       },
+      {
+        breakpoint: 501,
+        settings: {
+          dots: true,
+          arrows: false,
+          infinite: false,
+          variableWidth: false,
+          slidesToShow: 1,
+        },
+      },
     ],
   });
 
@@ -42,6 +52,18 @@ $(document).ready(function () {
           slidesToScroll: 1,
           variableWidth: true,
           infinite: false,
+          responsive: [
+            {
+              breakpoint: 501,
+              settings: {
+                dots: true,
+                arrows: false,
+                infinite: false,
+                variableWidth: false,
+                slidesToShow: 1,
+              },
+            },
+          ],
         });
         $slickGreen = true;
       }
