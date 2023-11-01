@@ -652,8 +652,6 @@ a:focus {
 @media (max-width: 1024px) {
   .header .wrapper .header-info .menu-wrap .main-menu li button {
     font-size: 0;
-  }
-  .header .wrapper .header-info .menu-wrap .main-menu li button img {
     display: none;
   }
 }
@@ -671,6 +669,7 @@ a:focus {
 @media (max-width: 1024px) {
   .header .wrapper .header-info .menu-wrap .main-menu li .sub-menu {
     display: block;
+    margin-top: 0;
   }
   .header .wrapper .header-info .menu-wrap .main-menu li .sub-menu li {
     margin-bottom: 20px;
@@ -1057,7 +1056,7 @@ a:focus {
     margin-right: 30px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .main-menu > li {
     margin: 0;
     margin-bottom: 25px;
@@ -1072,6 +1071,11 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
   white-space: nowrap;
+}
+@media (max-width: 1024px) {
+  .main-menu > li a {
+    font-size: 18px;
+  }
 }
 .main-menu > li a img {
   margin-left: 4px;
@@ -1113,7 +1117,7 @@ a:focus {
   -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
   padding: 20px 15px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .main-menu > li .sub-menu {
     opacity: 1;
     visibility: visible;
@@ -1131,7 +1135,7 @@ a:focus {
 .main-menu > li .sub-menu li {
   margin-bottom: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .main-menu > li .sub-menu li {
     margin-bottom: 15px;
   }
@@ -1145,7 +1149,7 @@ a:focus {
 .main-menu > li:hover button:after {
   border-top-color: #008b3b;
 }
-@media (min-width: 768px) {
+@media (min-width: 1025px) {
   .main-menu > li:hover .sub-menu {
     opacity: 1;
     visibility: visible;
