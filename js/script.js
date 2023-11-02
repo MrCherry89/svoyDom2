@@ -90,5 +90,14 @@ $(document).ready(function () {
     $("body, html").css({ overflow: "visible" });
   });
 
+  $(".tab-menu li button").on("click", function (e) {
+    e.preventDefault();
+    $(this).closest(".tab-menu").find("li").removeClass("active");
+    $(this).closest("li").addClass("active");
+    var index = $(this).closest("li").index();
+    $(".tab-content-item").removeClass("active");
+    $(".tab-content-item").eq(index).addClass("active");
+  });
+
   AOS.init();
 });

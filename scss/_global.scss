@@ -78,7 +78,7 @@ a {
   max-width: 1480px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 .title-wrap {
@@ -89,14 +89,21 @@ a {
     margin-bottom: 20px;
     padding-bottom: 25px;
   }
+  .main-title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #000;
+    @media (max-width: 1024px) {
+      text-align: center;
+      font-size: 24px;
+    }
+  }
 }
 .main-title {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 48px;
   color: #000;
-  @media (max-width: 1024px) {
-    text-align: center;
-    font-size: 24px;
+  @media (max-width: 1200px) {
+    font-size: 28px;
   }
 }
 
@@ -893,6 +900,46 @@ a {
           }
         }
       }
+    }
+  }
+}
+
+.tab-menu {
+  @include flex;
+  margin-bottom: 20px;
+  @include flex-wrap;
+  @media (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+  li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    button {
+      font-size: 16px;
+      transition: 0.3s;
+      border-radius: 50px;
+      color: #141414;
+      background: #f4f4f4;
+      padding: 10px 28px;
+    }
+
+    &.active {
+      button {
+        color: #fff;
+        background: $green;
+      }
+    }
+  }
+}
+
+.tab-content {
+  .tab-content-item {
+    height: 0px;
+    overflow: hidden;
+    &.active {
+      height: auto;
+      overflow: visible;
     }
   }
 }
