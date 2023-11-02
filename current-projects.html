@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="fixed">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,17 +18,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="fixed">
-    <div class="fixed-block">
-      <div class="info">
-        <h3>Ваш город Алматы?</h3>
-        <div class="buttons">
-          <button type="button" class="green-btn okey">Всё верно</button>
-          <button class="white-btn">Нет, другой</button>
-        </div>
-      </div>
-    </div>
-
+  <body>
     <header class="header">
       <div class="wrapper">
         <div class="header-info">
@@ -114,156 +104,35 @@
       </div>
     </header>
 
-    <div class="banner-slider-wrap">
+    <div class="breadcrumbs-wrap">
       <div class="wrapper">
-        <div class="banner-slider">
-          <a
-            href="#"
-            class="item"
-            style="background-image: url(img/banner-item-bg.png)"
-          >
-            <div class="texts">
-              <b>Традиции в новом свете!</b>
-              <span class="persent green">От 13.7%</span>
-            </div>
-            <img src="img/banner-slider-img1.png" alt="" />
-          </a>
-          <a href="#" class="item" style="background-image: url(img/bg2.png)">
-            <div class="texts">
-              <b>Cобственная набережная и аллея</b>
-              <span class="persent blue">От 13.7%</span>
-            </div>
-            <img src="img/banner-slider-img2.png" alt="" />
-          </a>
-          <a href="#" class="item">
-            <div class="texts">
-              <b>Срок сдачи 24 месяца</b>
-              <span class="persent purple">От 13.7%</span>
-            </div>
-            <img src="img/banner-slider-img3.png" alt="" />
-          </a>
-          <a href="#" class="item">
-            <div class="texts">
-              <b>Срок сдачи 24 месяца</b>
-              <span class="persent blue">От 13.7%</span>
-            </div>
-            <img src="img/banner-slider-img4.png" alt="" />
-          </a>
-        </div>
+        <ul class="breadcrumbs-menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><span>Текущие проекты</span></li>
+        </ul>
       </div>
     </div>
 
-    <div class="apartment-search">
+    <div class="current-projects center">
       <div class="wrapper">
-        <div class="title-wrap">
-          <h2
-            class="main-title"
-            data-aos="fade-right"
-            data-aos-offset="-100"
-            data-aos-delay="200"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
-            Поиск квартиры
-          </h2>
-        </div>
-        <div class="apartment-search-info">
-          <div class="select-wrap border full">
-            <select>
-              <option value="1">Жилой комплекс</option>
-              <option value="2">Первый</option>
-              <option value="3">Второй</option>
-            </select>
-          </div>
-          <div class="range-info">
-            <div class="inputs">
-              <div class="input-wrap">
-                от
-                <input type="number" min="0" max="200" step="1" id="input1-1" />
-                м<sup>2</sup>
-              </div>
-              <div class="input-wrap">
-                до
-                <input type="number" min="0" max="200" step="1" id="input1-2" />
-                м<sup>2</sup>
-              </div>
-            </div>
-            <div id="range-slider-1"></div>
-          </div>
-          <div class="range-info full">
-            <div class="inputs">
-              <div class="input-wrap">
-                от
-                <input
-                  type="number"
-                  min="0"
-                  max="100000"
-                  step="1"
-                  id="input2-1"
-                />
-                ₸
-              </div>
-              <div class="input-wrap">
-                до
-                <input
-                  type="number"
-                  min="0"
-                  max="100000"
-                  step="1"
-                  id="input2-2"
-                />
-                ₸
-              </div>
-            </div>
-            <div id="range-slider-2"></div>
-          </div>
-          <div class="select-wrap border">
-            <select>
-              <option value="1">Блок</option>
-              <option value="2">Первый</option>
-              <option value="3">Второй</option>
-            </select>
-          </div>
-          <div class="select-wrap border">
-            <select>
-              <option value="1">Подъезд</option>
-              <option value="2">Первый</option>
-              <option value="3">Второй</option>
-            </select>
-          </div>
-          <div class="select-wrap border">
-            <select>
-              <option value="1">Этаж</option>
-              <option value="2">Первый</option>
-              <option value="3">Второй</option>
-            </select>
-          </div>
-          <div class="select-wrap border">
-            <select>
-              <option value="1">1-10 ком</option>
-              <option value="2">Первый</option>
-              <option value="3">Второй</option>
-            </select>
-          </div>
-          <a href="#" class="green-btn">Поиск</a>
-          <a href="#" class="grey-btn">На карте</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="current-projects">
-      <div class="wrapper">
-        <div class="title-wrap">
-          <h2
-            class="main-title"
-            data-aos="fade-right"
-            data-aos-offset="-100"
-            data-aos-delay="500"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
-            Текущие проекты
-          </h2>
+        <h2
+          class="main-title"
+          data-aos="fade-right"
+          data-aos-offset="-100"
+          data-aos-delay="500"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+        >
+          Текущие проекты
+        </h2>
+        <div class="select-wrap style2">
+          <select>
+            <option value="1">Показано 120 объектов</option>
+            <option value="2">24</option>
+            <option value="3">64</option>
+            <option value="4">Алматы</option>
+            <option value="5">Алматы</option>
+          </select>
         </div>
         <div class="projects-items">
           <a href="#" class="projects-item">
@@ -370,121 +239,60 @@
               <img src="img/small-logo.png" alt="" />
             </div>
           </a>
-        </div>
-        <a href="#" class="grey-btn">Все проекты</a>
-      </div>
-    </div>
-
-    <div class="map-objects">
-      <div class="wrapper">
-        <div class="title-wrap">
-          <h2
-            class="main-title"
-            data-aos="fade-right"
-            data-aos-offset="-100"
-            data-aos-delay="100"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
-            Карта всех объектов
-          </h2>
-        </div>
-        <div id="map"></div>
-      </div>
-    </div>
-
-    <div class="info-block">
-      <div class="wrapper">
-        <div class="title-wrap">
-          <h2
-            class="main-title"
-            data-aos="fade-right"
-            data-aos-offset="-100"
-            data-aos-delay="100"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
-            Цифры говорят больше, чем слова
-          </h2>
-        </div>
-        <div class="info-slider">
-          <div class="item">
-            <div class="text-wrap">
-              <img src="img/shield.svg" alt="" />
-              <b>1 200</b>
-              <span
-                >Проектов было успешно реализовано за всё время нашей
-                работы</span
-              >
-            </div>
+          <a href="#" class="projects-item mobile-hide">
             <div class="img-wrap">
-              <img src="img/info-img1.png" alt="" />
+              <img src="img/project-img1.jpg" alt="" />
             </div>
-          </div>
-          <div class="item">
             <div class="text-wrap">
-              <img src="img/shield.svg" alt="" />
-              <b>10 200 м2</b>
-              <span
-                >Метров было успешно реализовано за всё время нашей работы</span
-              >
+              <b>Название ЖК</b>
+              <span class="grey-text">пр. Аль Фараби (бывшая ул. 38) ..</span>
+              <span class="text">От 650 000 ₸ м2</span>
+              <span class="text">От 40м2 - 150 м2</span>
+              <span class="grey-text">IV квартал 2023</span>
+              <img src="img/small-logo.png" alt="" />
             </div>
-            <div class="img-wrap style2">
-              <img src="img/info-img2.png" alt="" />
-            </div>
-          </div>
-          <div class="item">
-            <div class="text-wrap">
-              <img src="img/shield.svg" alt="" />
-              <b>15 000</b>
-              <span>Квартир было успешно реализовано за всё время нашей</span>
-            </div>
+          </a>
+          <a href="#" class="projects-item mobile-hide">
             <div class="img-wrap">
-              <img src="img/info-img3.png" alt="" />
+              <img src="img/project-img2.jpg" alt="" />
             </div>
-          </div>
+            <div class="text-wrap">
+              <b>Название ЖК</b>
+              <span class="grey-text">пр. Аль Фараби (бывшая ул. 38) ..</span>
+              <span class="text">От 650 000 ₸ м2</span>
+              <span class="text">От 40м2 - 150 м2</span>
+              <span class="grey-text">IV квартал 2023</span>
+              <img src="img/small-logo.png" alt="" />
+            </div>
+          </a>
+          <a href="#" class="projects-item mobile-hide">
+            <div class="img-wrap">
+              <img src="img/project-img3.jpg" alt="" />
+            </div>
+            <div class="text-wrap">
+              <b>Название ЖК</b>
+              <span class="grey-text">пр. Аль Фараби (бывшая ул. 38) ..</span>
+              <span class="text">От 650 000 ₸ м2</span>
+              <span class="text">От 40м2 - 150 м2</span>
+              <span class="grey-text">IV квартал 2023</span>
+              <img src="img/small-logo.png" alt="" />
+            </div>
+          </a>
+          <a href="#" class="projects-item mobile-hide">
+            <div class="img-wrap">
+              <img src="img/project-img4.jpg" alt="" />
+            </div>
+            <div class="text-wrap">
+              <b>Название ЖК</b>
+              <span class="grey-text">пр. Аль Фараби (бывшая ул. 38) ..</span>
+              <span class="text">От 650 000 ₸ м2</span>
+              <span class="text">От 40м2 - 150 м2</span>
+              <span class="grey-text">IV квартал 2023</span>
+              <img src="img/small-logo.png" alt="" />
+            </div>
+          </a>
         </div>
-      </div>
-    </div>
-
-    <div class="interview">
-      <div class="wrapper">
-        <div class="title-wrap">
-          <h2
-            class="main-title"
-            data-aos="fade-right"
-            data-aos-offset="-100"
-            data-aos-delay="100"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
-            Интервью
-          </h2>
-        </div>
-        <div class="interview-items">
-          <div
-            class="interview-item"
-            style="background-image: url(img/interview-bg1.jpg)"
-          >
-            <h3>Интервью с директором компании SVOYDOM</h3>
-            <p>Метров было успешно реализовано за всё время нашей работы</p>
-            <a href="https://www.youtube.com/" class="red-btn"
-              >Смотреть на YouTube</a
-            >
-            <img src="img/interview-img1.png" alt="" class="interview-img" />
-          </div>
-          <div
-            class="interview-item"
-            style="background-image: url(img/interview-bg2.jpg)"
-          >
-            <h3>Интервью с директором компании SVOYDOM</h3>
-            <p>Метров было успешно реализовано за всё время нашей работы</p>
-            <a href="https://www.youtube.com/" class="red-btn"
-              >Смотреть на YouTube</a
-            >
-            <img src="img/interview-img2.png" alt="" class="interview-img" />
-          </div>
-        </div>
+        <a href="#" class="grey-btn">Загрузить еще</a>
       </div>
     </div>
 
@@ -610,109 +418,6 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 
     <script>
-      let center5 = [55.707076, 37.385825];
-      let center6 = [55.847076, 37.485825];
-      let center7 = [55.687076, 36.885825];
-
-      function init() {
-        let map = new ymaps.Map("map", {
-          center: center5,
-          zoom: 9,
-          controls: [],
-        });
-
-        let placemark2 = new ymaps.Placemark(
-          center5,
-          {
-            balloonContent: `
-            
-            <div class="balloon-wrap2">
-          <div class="img-wrap">
-            <img src="img/ballon-img2.png" alt="" />
-          </div>
-          <div class="text-wrap">
-            <b>Название ЖК</b>
-            <span>пр. Аль Фараби (бывшая ул. 38) ..</span>
-            <img src="img/small-logo.png" alt="" />
-          </div>
-        </div>
-            
-            `,
-          },
-          {
-            iconLayout: "default#image",
-            iconImageHref: "img/map-marker.svg",
-            iconImageOffset: [0, 0],
-            iconImageSize: [100, 34],
-            hideIconOnBalloonOpen: false,
-          }
-        );
-
-        let placemark3 = new ymaps.Placemark(
-          center6,
-          {
-            balloonContent: `
-
-            <div class="balloon-wrap2">
-          <div class="img-wrap">
-            <img src="img/ballon-img2.png" alt="" />
-          </div>
-          <div class="text-wrap">
-            <b>Название ЖК 2</b>
-            <span>пр. Аль Фараби (бывшая ул. 38) ..</span>
-            <img src="img/small-logo.png" alt="" />
-          </div>
-        </div>
-
-                `,
-          },
-          {
-            iconLayout: "default#image",
-            iconImageHref: "img/map-marker.svg",
-            iconImageOffset: [0, 0],
-            iconImageSize: [100, 34],
-            hideIconOnBalloonOpen: false,
-          }
-        );
-
-        let placemark4 = new ymaps.Placemark(
-          center7,
-          {
-            balloonContent: `
-
-            <div class="balloon-wrap2">
-          <div class="img-wrap">
-            <img src="img/ballon-img2.png" alt="" />
-          </div>
-          <div class="text-wrap">
-            <b>Название ЖК 3</b>
-            <span>пр. Аль Фараби (бывшая ул. 38) ..</span>
-            <img src="img/small-logo.png" alt="" />
-          </div>
-        </div>
-
-                `,
-          },
-          {
-            iconLayout: "default#image",
-            iconImageHref: "img/map-marker.svg",
-            iconImageOffset: [0, 0],
-            iconImageSize: [100, 34],
-            hideIconOnBalloonOpen: false,
-          }
-        );
-
-        map.geoObjects.add(placemark2);
-        map.geoObjects.add(placemark3);
-        map.geoObjects.add(placemark4);
-        map.behaviors.disable("scrollZoom");
-
-        // placemark.balloon.open();
-      }
-      ymaps.ready(init);
-    </script>
-
-    <script>
       let center2 = [55.707076, 37.385825];
       let center3 = [55.847076, 37.485825];
       let center4 = [55.687076, 36.885825];
@@ -755,68 +460,6 @@
         map.behaviors.disable("scrollZoom");
       }
       ymaps.ready(init);
-    </script>
-
-    <script>
-      // RangeSlider 1 - start
-      var rangeSlider_1 = document.getElementById("range-slider-1");
-      var input1_1 = document.getElementById("input1-1");
-      var input1_2 = document.getElementById("input1-2");
-      var inputs_1 = [input1_1, input1_2];
-
-      noUiSlider.create(rangeSlider_1, {
-        start: [0, 200],
-        connect: true,
-        range: {
-          min: 0,
-          max: 200,
-        },
-        format: {
-          to: (v) => v | 0,
-          from: (v) => v | 0,
-        },
-      });
-
-      rangeSlider_1.noUiSlider.on("update", function (values, handle) {
-        inputs_1[handle].value = values[handle];
-      });
-
-      inputs_1.forEach(function (input, handle) {
-        input.addEventListener("change", function () {
-          rangeSlider_1.noUiSlider.setHandle(handle, this.value);
-        });
-      });
-      // RangeSlider 1 - end
-
-      // RangeSlider 2 - start
-      var rangeSlider_2 = document.getElementById("range-slider-2");
-      var input2_1 = document.getElementById("input2-1");
-      var input2_2 = document.getElementById("input2-2");
-      var inputs_2 = [input2_1, input2_2];
-
-      noUiSlider.create(rangeSlider_2, {
-        start: [0, 1000000],
-        connect: true,
-        range: {
-          min: 0,
-          max: 1000000,
-        },
-        format: {
-          to: (v) => v | 0,
-          from: (v) => v | 0,
-        },
-      });
-
-      rangeSlider_2.noUiSlider.on("update", function (values, handle) {
-        inputs_2[handle].value = values[handle];
-      });
-
-      inputs_2.forEach(function (input, handle) {
-        input.addEventListener("change", function () {
-          rangeSlider_2.noUiSlider.setHandle(handle, this.value);
-        });
-      });
-      // RangeSlider 2 - end
     </script>
   </body>
 </html>

@@ -764,108 +764,6 @@
   }
 }
 
-.current-projects {
-  margin-top: 80px;
-  @media (max-width: 1024px) {
-    margin-top: 50px;
-  }
-  .wrapper {
-    @media (max-width: 767px) {
-      text-align: center;
-    }
-    .grey-btn {
-      margin-top: 24px;
-      @media (max-width: 767px) {
-        margin: 24px auto 0;
-      }
-    }
-    .projects-items {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 15px;
-      @media (max-width: 1300px) {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-      @media (max-width: 1024px) {
-        grid-template-columns: 1fr 1fr;
-      }
-      @media (max-width: 767px) {
-        grid-template-columns: 1fr;
-      }
-      .projects-item {
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid #e4e4e4;
-        @media (max-width: 767px) {
-          max-width: 470px;
-          margin: 0 auto;
-          width: 100%;
-        }
-        .img-wrap {
-          @include flex;
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-        .text-wrap {
-          padding: 20px;
-          background: white;
-          @include flex;
-          @include dir-col;
-          align-items: flex-start;
-          min-height: 236px;
-          position: relative;
-          top: auto;
-          margin-bottom: -50px;
-          @media (max-width: 1024px) {
-            margin-bottom: 0;
-            min-height: auto;
-          }
-          b {
-            font-size: 24px;
-            color: #000;
-            font-weight: 600;
-            display: block;
-            @media (max-width: 1024px) {
-              font-size: 18px;
-            }
-          }
-          span {
-            margin-bottom: 10px;
-            display: inline-block;
-            @media (max-width: 1024px) {
-              font-size: 14px;
-            }
-            &.text {
-              color: #000;
-            }
-            &.grey-text {
-              margin-top: 5px;
-            }
-          }
-          img {
-            margin-top: 10px;
-          }
-        }
-        @media (min-width: 1025px) {
-          &:hover {
-            .text-wrap {
-              top: -50px;
-            }
-          }
-        }
-        @media (max-width: 767px) {
-          &.mobile-hide {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-}
-
 .apartment-search {
   margin-top: 80px;
   position: relative;
@@ -1098,5 +996,76 @@
   }
   &.hide {
     display: none;
+  }
+}
+
+.breadcrumbs-wrap {
+  margin-bottom: 10px;
+  @media (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+  .wrapper {
+    .breadcrumbs-menu {
+      @include flex;
+      @include flex-wrap;
+      li {
+        margin-right: 22px;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 0;
+        @media (max-width: 767px) {
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+        &:after {
+          content: "";
+          background: url(../img/arr-right.svg);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          position: absolute;
+          top: 50%;
+          margin-top: -4px;
+          left: -15px;
+          width: 7px;
+          height: 11px;
+          @media (max-width: 767px) {
+            content: none;
+          }
+        }
+        &:first-child {
+          &:after {
+            content: none;
+          }
+        }
+        &:last-child {
+          &:after {
+            content: "";
+            background: url(../img/arr-right-green.svg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            right: -15px;
+            width: 7px;
+            height: 11px;
+            @media (max-width: 767px) {
+              content: none;
+            }
+          }
+        }
+        a {
+          font-size: 14px;
+          color: #a5a5a5;
+        }
+        span {
+          font-size: 14px;
+          color: $green;
+          font-weight: 500;
+        }
+      }
+    }
   }
 }
