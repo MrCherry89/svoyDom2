@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>SVOYDOM</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/slick-theme.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
+    <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header-info">
+          <a href="index.html" class="logo"
+            ><img src="img/logo.svg" alt=""
+          /></a>
+          <div class="menu-wrap">
+            <ul class="main-menu">
+              <li>
+                <button type="button">Проекты <span>Меню</span></button>
+                <ul class="sub-menu">
+                  <li><a href="current-projects.html">Текущие проекты</a></li>
+                  <li><a href="completed-projects.html">Завершенные</a></li>
+                </ul>
+              </li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+            <div class="btn-wrap">
+              <a href="#" class="green-btn">Заказать звонок</a>
+              <div class="select-wrap lang">
+                <select>
+                  <option value="1">Ру</option>
+                  <option value="2">Kz</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="header-buttons">
+            <a href="#" class="comparsion-link">
+              <svg
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_9_196)">
+                  <path
+                    d="M20.2774 11.0554L17.5298 4.63249C17.5841 4.48709 17.6154 4.33034 17.6154 4.16637C17.6153 3.8127 17.4748 3.47354 17.2247 3.22349C16.9745 2.97344 16.6353 2.83297 16.2817 2.83297C16.0703 2.8329 15.8619 2.88326 15.6739 2.97988C15.4859 3.07649 15.3236 3.21656 15.2006 3.38846H12.1254C11.972 3.02642 11.7154 2.71758 11.3875 2.50048C11.0597 2.28339 10.6752 2.16765 10.282 2.16772C9.8888 2.1678 9.50433 2.28368 9.17658 2.5009C8.84883 2.71811 8.59231 3.02705 8.43904 3.38915H5.36387C5.19914 3.16039 4.96612 2.98973 4.69831 2.90171C4.4305 2.81369 4.14167 2.81284 3.87335 2.89928C3.60502 2.98572 3.371 3.15499 3.20492 3.38278C3.03885 3.61057 2.94926 3.88515 2.94903 4.16706C2.94903 4.33102 2.98031 4.48743 3.03462 4.63318L0.287039 11.0554H0.282227C0.282227 13.1413 2.0735 14.8332 4.28243 14.8332C6.49205 14.8332 8.2823 13.1413 8.2823 11.0554H8.27748L5.66362 4.94462H8.43904C8.59169 5.30449 8.84603 5.61199 9.17089 5.82943V15.7222H5.17102V16.6111C5.17102 17.8335 7.05511 20.5 8.27748 20.5H12.2825C13.5049 20.5 15.3934 17.8335 15.3934 16.6111V15.7222H11.3932V5.82908C11.7179 5.61162 11.9722 5.30428 12.1251 4.94462H14.9001L12.2825 11.0554L12.2808 11.0589L12.2825 11.0596C12.2849 13.1437 14.0748 14.8332 16.2824 14.8332C18.492 14.8332 20.2822 13.1413 20.2822 11.0554H20.2774ZM7.06886 11.0554H1.49566L3.8964 5.44271C4.14805 5.51868 4.41654 5.51856 4.66812 5.44237L7.06886 11.0554ZM13.4908 11.0554L15.8953 5.44271C16.1472 5.51929 16.4162 5.51929 16.6681 5.44271L19.0691 11.0554H13.4908Z"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_9_196">
+                    <rect
+                      width="20"
+                      height="20"
+                      fill="white"
+                      transform="translate(0.282227 0.5)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+            <div class="select-wrap icon-select">
+              <select>
+                <option value="1">Алматы</option>
+                <option value="2">Астана</option>
+                <option value="3">Атырау</option>
+              </select>
+            </div>
+            <button class="drop-menu">
+              <img src="img/drop-icon.svg" alt="" />
+            </button>
+            <a href="favorites.html" class="favorite-icon">
+              <svg
+                width="20"
+                height="21"
+                viewBox="0 0 20 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M18.4134 3.0747C17.3781 1.95181 15.9575 1.33337 14.413 1.33337C13.2585 1.33337 12.2013 1.69837 11.2704 2.41814C10.8008 2.78142 10.3752 3.22595 10 3.7447C9.62492 3.22607 9.19922 2.78142 8.72941 2.41814C7.79875 1.69837 6.74148 1.33337 5.58699 1.33337C4.0425 1.33337 2.62176 1.95181 1.58645 3.0747C0.563516 4.18447 0 5.7006 0 7.34396C0 9.03537 0.630351 10.5837 1.98363 12.2167C3.19426 13.6774 4.93422 15.1603 6.94914 16.8774C7.63719 17.4638 8.41707 18.1284 9.22684 18.8364C9.4408 19.0238 9.71557 19.1271 10 19.127C10.2846 19.127 10.5592 19.0238 10.7729 18.8367C11.5826 18.1286 12.363 17.4636 13.0513 16.8769C15.0659 15.1601 16.8059 13.6774 18.0165 12.2165C19.3698 10.5838 20 9.0354 20 7.3438C20 5.7006 19.4365 4.18447 18.4134 3.0747Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="breadcrumbs-wrap">
+      <div class="wrapper">
+        <ul class="breadcrumbs-menu">
+          <li><a href="index.html">Главная</a></li>
+          <li><span>Поиск</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="apartments-wrap">
+      <div class="wrapper">
+        <h2
+          class="main-title"
+          data-aos="fade-right"
+          data-aos-offset="-100"
+          data-aos-delay="500"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+        >
+          Результаты
+        </h2>
+        <div class="select-wrap style2">
+          <select>
+            <option value="1">Показано 120 объектов</option>
+            <option value="2">24</option>
+            <option value="3">64</option>
+            <option value="4">Алматы</option>
+            <option value="5">Алматы</option>
+          </select>
+        </div>
+        <div class="apartment-search-info">
+          <div class="select-wrap border full">
+            <select>
+              <option value="1">Жилой комплекс</option>
+              <option value="2">Первый</option>
+              <option value="3">Второй</option>
+            </select>
+          </div>
+          <div class="range-info">
+            <div class="inputs">
+              <div class="input-wrap">
+                от
+                <input type="number" min="0" max="200" step="1" id="input1-1" />
+                м<sup>2</sup>
+              </div>
+              <div class="input-wrap">
+                до
+                <input type="number" min="0" max="200" step="1" id="input1-2" />
+                м<sup>2</sup>
+              </div>
+            </div>
+            <div id="range-slider-1"></div>
+          </div>
+          <div class="range-info full">
+            <div class="inputs">
+              <div class="input-wrap">
+                от
+                <input
+                  type="number"
+                  min="0"
+                  max="100000"
+                  step="1"
+                  id="input2-1"
+                />
+                ₸
+              </div>
+              <div class="input-wrap">
+                до
+                <input
+                  type="number"
+                  min="0"
+                  max="100000"
+                  step="1"
+                  id="input2-2"
+                />
+                ₸
+              </div>
+            </div>
+            <div id="range-slider-2"></div>
+          </div>
+          <div class="select-wrap border">
+            <select>
+              <option value="1">Блок</option>
+              <option value="2">Первый</option>
+              <option value="3">Второй</option>
+            </select>
+          </div>
+          <div class="select-wrap border">
+            <select>
+              <option value="1">Подъезд</option>
+              <option value="2">Первый</option>
+              <option value="3">Второй</option>
+            </select>
+          </div>
+          <div class="select-wrap border">
+            <select>
+              <option value="1">Этаж</option>
+              <option value="2">Первый</option>
+              <option value="3">Второй</option>
+            </select>
+          </div>
+          <div class="select-wrap border">
+            <select>
+              <option value="1">1-10 ком</option>
+              <option value="2">Первый</option>
+              <option value="3">Второй</option>
+            </select>
+          </div>
+          <a href="apartments.html" class="green-btn">Поиск</a>
+          <a href="#" class="grey-btn">На карте</a>
+          <div class="select-wrap border full">
+            <select>
+              <option value="1">Сортировать</option>
+              <option value="2">Первый</option>
+              <option value="3">Второй</option>
+            </select>
+          </div>
+          <div class="select-wrap border full">
+            <select>
+              <option value="1">Город</option>
+              <option value="2">Алматы</option>
+              <option value="3">Астана</option>
+            </select>
+          </div>
+          <ul class="tab-menu">
+            <li>
+              <button type="button">
+                <svg
+                  width="29"
+                  height="28"
+                  viewBox="0 0 29 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="5.80078"
+                    y="5.6001"
+                    width="17.7867"
+                    height="2.98667"
+                  />
+                  <rect
+                    x="5.80078"
+                    y="12.3201"
+                    width="17.7867"
+                    height="2.98667"
+                  />
+                  <rect
+                    x="5.80078"
+                    y="19.04"
+                    width="17.7867"
+                    height="2.98667"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li class="active">
+              <button type="button">
+                <svg
+                  width="29"
+                  height="28"
+                  viewBox="0 0 29 28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect x="5.80078" y="5.6001" width="8.12" height="7.46667" />
+                  <rect x="5.80078" y="14.5601" width="8.12" height="7.46667" />
+                  <rect x="15.4688" y="5.6001" width="8.12" height="7.46667" />
+                  <rect x="15.4688" y="14.5601" width="8.12" height="7.46667" />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <div class="tab-content-item">
+            <div class="apartments-items1">
+              <a href="#" class="favorites-item2">
+                <span class="img-wrap">
+                  <img src="img/favorites-img.png" alt="" />
+                </span>
+                <div class="text-wrap">
+                  <b>4-комн, № 55</b>
+                  <div class="texts-info">
+                    <div class="texts">
+                      <span>Квадратура</span>
+                      <span>Жилая площадь</span>
+                      <span>Общая стоимость</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">119.53 м²</span>
+                      <span class="black">80 м²</span>
+                      <span class="black">65 050 000 ₸</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">3 этаж</span>
+                      <span class="black">2 подъезд</span>
+                      <span class="black">3 блок</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="icons">
+                  <span class="icon">
+                    <img src="img/favorite-icon.svg" alt="" />
+                  </span>
+                  <span class="icon">
+                    <img src="img/print-icon.svg" alt="" />
+                  </span>
+                  <span class="icon"> 3D </span>
+                </div>
+              </a>
+              <a href="#" class="favorites-item2">
+                <span class="img-wrap">
+                  <img src="img/favorites-img.png" alt="" />
+                </span>
+                <div class="text-wrap">
+                  <b>4-комн, № 55</b>
+                  <div class="texts-info">
+                    <div class="texts">
+                      <span>Квадратура</span>
+                      <span>Жилая площадь</span>
+                      <span>Общая стоимость</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">119.53 м²</span>
+                      <span class="black">80 м²</span>
+                      <span class="black">65 050 000 ₸</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">3 этаж</span>
+                      <span class="black">2 подъезд</span>
+                      <span class="black">3 блок</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="icons">
+                  <span class="icon">
+                    <img src="img/favorite-icon.svg" alt="" />
+                  </span>
+                  <span class="icon">
+                    <img src="img/print-icon.svg" alt="" />
+                  </span>
+                  <span class="icon"> 3D </span>
+                </div>
+              </a>
+              <a href="#" class="favorites-item2">
+                <span class="img-wrap">
+                  <img src="img/favorites-img.png" alt="" />
+                </span>
+                <div class="text-wrap">
+                  <b>4-комн, № 55</b>
+                  <div class="texts-info">
+                    <div class="texts">
+                      <span>Квадратура</span>
+                      <span>Жилая площадь</span>
+                      <span>Общая стоимость</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">119.53 м²</span>
+                      <span class="black">80 м²</span>
+                      <span class="black">65 050 000 ₸</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">3 этаж</span>
+                      <span class="black">2 подъезд</span>
+                      <span class="black">3 блок</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="icons">
+                  <span class="icon">
+                    <img src="img/favorite-icon.svg" alt="" />
+                  </span>
+                  <span class="icon">
+                    <img src="img/print-icon.svg" alt="" />
+                  </span>
+                  <span class="icon"> 3D </span>
+                </div>
+              </a>
+              <a href="#" class="favorites-item2">
+                <span class="img-wrap">
+                  <img src="img/favorites-img.png" alt="" />
+                </span>
+                <div class="text-wrap">
+                  <b>4-комн, № 55</b>
+                  <div class="texts-info">
+                    <div class="texts">
+                      <span>Квадратура</span>
+                      <span>Жилая площадь</span>
+                      <span>Общая стоимость</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">119.53 м²</span>
+                      <span class="black">80 м²</span>
+                      <span class="black">65 050 000 ₸</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">3 этаж</span>
+                      <span class="black">2 подъезд</span>
+                      <span class="black">3 блок</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="icons">
+                  <span class="icon">
+                    <img src="img/favorite-icon.svg" alt="" />
+                  </span>
+                  <span class="icon">
+                    <img src="img/print-icon.svg" alt="" />
+                  </span>
+                  <span class="icon"> 3D </span>
+                </div>
+              </a>
+              <a href="#" class="favorites-item2">
+                <span class="img-wrap">
+                  <img src="img/favorites-img.png" alt="" />
+                </span>
+                <div class="text-wrap">
+                  <b>4-комн, № 55</b>
+                  <div class="texts-info">
+                    <div class="texts">
+                      <span>Квадратура</span>
+                      <span>Жилая площадь</span>
+                      <span>Общая стоимость</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">119.53 м²</span>
+                      <span class="black">80 м²</span>
+                      <span class="black">65 050 000 ₸</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">3 этаж</span>
+                      <span class="black">2 подъезд</span>
+                      <span class="black">3 блок</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="icons">
+                  <span class="icon">
+                    <img src="img/favorite-icon.svg" alt="" />
+                  </span>
+                  <span class="icon">
+                    <img src="img/print-icon.svg" alt="" />
+                  </span>
+                  <span class="icon"> 3D </span>
+                </div>
+              </a>
+              <a href="#" class="favorites-item2">
+                <span class="img-wrap">
+                  <img src="img/favorites-img.png" alt="" />
+                </span>
+                <div class="text-wrap">
+                  <b>4-комн, № 55</b>
+                  <div class="texts-info">
+                    <div class="texts">
+                      <span>Квадратура</span>
+                      <span>Жилая площадь</span>
+                      <span>Общая стоимость</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">119.53 м²</span>
+                      <span class="black">80 м²</span>
+                      <span class="black">65 050 000 ₸</span>
+                    </div>
+                    <div class="texts">
+                      <span class="black">3 этаж</span>
+                      <span class="black">2 подъезд</span>
+                      <span class="black">3 блок</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="icons">
+                  <span class="icon">
+                    <img src="img/favorite-icon.svg" alt="" />
+                  </span>
+                  <span class="icon">
+                    <img src="img/print-icon.svg" alt="" />
+                  </span>
+                  <span class="icon"> 3D </span>
+                </div>
+              </a>
+              <button class="grey-btn">Загрузить еще</button>
+            </div>
+          </div>
+          <div class="tab-content-item active">
+            <div class="apartments-items2">
+              <div class="favorites-items">
+                <a href="#" class="favorites-item">
+                  <span class="img-wrap">
+                    <img src="img/favorites-img.png" alt="" />
+                  </span>
+                  <div class="text-wrap">
+                    <b>4-комн, № 55</b>
+                    <ul class="favorite-info-list">
+                      <li>
+                        <span>Квадратура:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Жилая площадь:</span>
+                        <span class="black">61 229 153 ₸</span>
+                      </li>
+                      <li>
+                        <span>Площадь:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Этаж: </span>
+                        <span class="black">4</span>
+                      </li>
+                      <li>
+                        <span>Подъезд:</span>
+                        <span class="black">2</span>
+                      </li>
+                      <li>
+                        <span>Блок:</span>
+                        <span class="black">3</span>
+                      </li>
+                    </ul>
+                    <div class="icons">
+                      <span class="icon">
+                        <img src="img/favorite-icon.svg" alt="" />
+                      </span>
+                      <span class="icon">
+                        <img src="img/print-icon.svg" alt="" />
+                      </span>
+                      <span class="icon"> 3D </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="favorites-item">
+                  <span class="img-wrap">
+                    <img src="img/favorites-img.png" alt="" />
+                  </span>
+                  <div class="text-wrap">
+                    <b>4-комн, № 55</b>
+                    <ul class="favorite-info-list">
+                      <li>
+                        <span>Квадратура:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Жилая площадь:</span>
+                        <span class="black">61 229 153 ₸</span>
+                      </li>
+                      <li>
+                        <span>Площадь:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Этаж: </span>
+                        <span class="black">4</span>
+                      </li>
+                      <li>
+                        <span>Подъезд:</span>
+                        <span class="black">2</span>
+                      </li>
+                      <li>
+                        <span>Блок:</span>
+                        <span class="black">3</span>
+                      </li>
+                    </ul>
+                    <div class="icons">
+                      <span class="icon">
+                        <img src="img/favorite-icon.svg" alt="" />
+                      </span>
+                      <span class="icon">
+                        <img src="img/print-icon.svg" alt="" />
+                      </span>
+                      <span class="icon"> 3D </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="favorites-item">
+                  <span class="img-wrap">
+                    <img src="img/favorites-img.png" alt="" />
+                  </span>
+                  <div class="text-wrap">
+                    <b>4-комн, № 55</b>
+                    <ul class="favorite-info-list">
+                      <li>
+                        <span>Квадратура:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Жилая площадь:</span>
+                        <span class="black">61 229 153 ₸</span>
+                      </li>
+                      <li>
+                        <span>Площадь:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Этаж: </span>
+                        <span class="black">4</span>
+                      </li>
+                      <li>
+                        <span>Подъезд:</span>
+                        <span class="black">2</span>
+                      </li>
+                      <li>
+                        <span>Блок:</span>
+                        <span class="black">3</span>
+                      </li>
+                    </ul>
+                    <div class="icons">
+                      <span class="icon">
+                        <img src="img/favorite-icon.svg" alt="" />
+                      </span>
+                      <span class="icon">
+                        <img src="img/print-icon.svg" alt="" />
+                      </span>
+                      <span class="icon"> 3D </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="favorites-item mobile-hide">
+                  <span class="img-wrap">
+                    <img src="img/favorites-img.png" alt="" />
+                  </span>
+                  <div class="text-wrap">
+                    <b>4-комн, № 55</b>
+                    <ul class="favorite-info-list">
+                      <li>
+                        <span>Квадратура:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Жилая площадь:</span>
+                        <span class="black">61 229 153 ₸</span>
+                      </li>
+                      <li>
+                        <span>Площадь:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Этаж: </span>
+                        <span class="black">4</span>
+                      </li>
+                      <li>
+                        <span>Подъезд:</span>
+                        <span class="black">2</span>
+                      </li>
+                      <li>
+                        <span>Блок:</span>
+                        <span class="black">3</span>
+                      </li>
+                    </ul>
+                    <div class="icons">
+                      <span class="icon">
+                        <img src="img/favorite-icon.svg" alt="" />
+                      </span>
+                      <span class="icon">
+                        <img src="img/print-icon.svg" alt="" />
+                      </span>
+                      <span class="icon"> 3D </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="favorites-item mobile-hide">
+                  <span class="img-wrap">
+                    <img src="img/favorites-img.png" alt="" />
+                  </span>
+                  <div class="text-wrap">
+                    <b>4-комн, № 55</b>
+                    <ul class="favorite-info-list">
+                      <li>
+                        <span>Квадратура:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Жилая площадь:</span>
+                        <span class="black">61 229 153 ₸</span>
+                      </li>
+                      <li>
+                        <span>Площадь:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Этаж: </span>
+                        <span class="black">4</span>
+                      </li>
+                      <li>
+                        <span>Подъезд:</span>
+                        <span class="black">2</span>
+                      </li>
+                      <li>
+                        <span>Блок:</span>
+                        <span class="black">3</span>
+                      </li>
+                    </ul>
+                    <div class="icons">
+                      <span class="icon">
+                        <img src="img/favorite-icon.svg" alt="" />
+                      </span>
+                      <span class="icon">
+                        <img src="img/print-icon.svg" alt="" />
+                      </span>
+                      <span class="icon"> 3D </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="favorites-item mobile-hide">
+                  <span class="img-wrap">
+                    <img src="img/favorites-img.png" alt="" />
+                  </span>
+                  <div class="text-wrap">
+                    <b>4-комн, № 55</b>
+                    <ul class="favorite-info-list">
+                      <li>
+                        <span>Квадратура:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Жилая площадь:</span>
+                        <span class="black">61 229 153 ₸</span>
+                      </li>
+                      <li>
+                        <span>Площадь:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Этаж: </span>
+                        <span class="black">4</span>
+                      </li>
+                      <li>
+                        <span>Подъезд:</span>
+                        <span class="black">2</span>
+                      </li>
+                      <li>
+                        <span>Блок:</span>
+                        <span class="black">3</span>
+                      </li>
+                    </ul>
+                    <div class="icons">
+                      <span class="icon">
+                        <img src="img/favorite-icon.svg" alt="" />
+                      </span>
+                      <span class="icon">
+                        <img src="img/print-icon.svg" alt="" />
+                      </span>
+                      <span class="icon"> 3D </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="favorites-item mobile-hide">
+                  <span class="img-wrap">
+                    <img src="img/favorites-img.png" alt="" />
+                  </span>
+                  <div class="text-wrap">
+                    <b>4-комн, № 55</b>
+                    <ul class="favorite-info-list">
+                      <li>
+                        <span>Квадратура:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Жилая площадь:</span>
+                        <span class="black">61 229 153 ₸</span>
+                      </li>
+                      <li>
+                        <span>Площадь:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Этаж: </span>
+                        <span class="black">4</span>
+                      </li>
+                      <li>
+                        <span>Подъезд:</span>
+                        <span class="black">2</span>
+                      </li>
+                      <li>
+                        <span>Блок:</span>
+                        <span class="black">3</span>
+                      </li>
+                    </ul>
+                    <div class="icons">
+                      <span class="icon">
+                        <img src="img/favorite-icon.svg" alt="" />
+                      </span>
+                      <span class="icon">
+                        <img src="img/print-icon.svg" alt="" />
+                      </span>
+                      <span class="icon"> 3D </span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="favorites-item mobile-hide">
+                  <span class="img-wrap">
+                    <img src="img/favorites-img.png" alt="" />
+                  </span>
+                  <div class="text-wrap">
+                    <b>4-комн, № 55</b>
+                    <ul class="favorite-info-list">
+                      <li>
+                        <span>Квадратура:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Жилая площадь:</span>
+                        <span class="black">61 229 153 ₸</span>
+                      </li>
+                      <li>
+                        <span>Площадь:</span>
+                        <span class="black">119.53 м <sup>²</sup></span>
+                      </li>
+                      <li>
+                        <span>Этаж: </span>
+                        <span class="black">4</span>
+                      </li>
+                      <li>
+                        <span>Подъезд:</span>
+                        <span class="black">2</span>
+                      </li>
+                      <li>
+                        <span>Блок:</span>
+                        <span class="black">3</span>
+                      </li>
+                    </ul>
+                    <div class="icons">
+                      <span class="icon">
+                        <img src="img/favorite-icon.svg" alt="" />
+                      </span>
+                      <span class="icon">
+                        <img src="img/print-icon.svg" alt="" />
+                      </span>
+                      <span class="icon"> 3D </span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <button class="grey-btn">Загрузить еще</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-us">
+      <div class="wrapper">
+        <div class="title-wrap">
+          <h2
+            class="main-title"
+            data-aos="fade-right"
+            data-aos-offset="-100"
+            data-aos-delay="100"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+          >
+            Свяжитесь с нами
+          </h2>
+        </div>
+        <div class="contact-info-wrap">
+          <div class="contact-form-wrap">
+            <img src="img/contact-bg.png" alt="" class="bg" />
+            <h3>Оставьте заявку мы вам обязательно перезвоним!</h3>
+            <p>
+              Заполните форму обратной связи, чтобы задать все интересующие Вас
+              вопросы и оставить запрос на поиск идеальной квартиры.
+            </p>
+            <form class="contact-form">
+              <div class="inputs">
+                <input type="text" placeholder="Ваше имя" />
+                <input
+                  type="tel"
+                  class="phone-number-input"
+                  placeholder="+ 7 700 000 00 00"
+                />
+                <div class="select-wrap">
+                  <select>
+                    <option value="1">Жилой комплекс</option>
+                    <option value="2">Первый</option>
+                    <option value="3">Второй</option>
+                  </select>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <button class="green-btn" type="button">Оставить заявку</button>
+                <p>
+                  Нажимая кнопку “отправить” вы соглашаетесь с
+                  <a href="#"> политикой обработки данных</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <div id="map2"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-top">
+          <div class="footer-menu-wrap">
+            <a href="index.html" class="footer-logo hide">
+              <img src="img/logo.svg" alt="" />
+            </a>
+            <ul class="main-menu">
+              <li><a href="#">О компании</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+              <li><a href="news.html">Новости</a></li>
+              <li>
+                <button type="button">Проекты</button>
+                <ul class="sub-menu">
+                  <li><a href="current-projects.html">Текущие проекты</a></li>
+                  <li><a href="completed-projects.html">Завершенные</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="social-menu">
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="links">
+            <a href="mailto:infosales@svoydom.kz">infosales@svoydom.kz</a>
+            <a href="tel:+77008360906">+7 700 836 09 06</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="top">
+            <a href="index.html" class="footer-logo">
+              <img src="img/logo.svg" alt="" />
+            </a>
+            <a href="#" class="green-btn">Рассылка Whatsapp</a>
+          </div>
+          <p>
+            Товарищество с ограниченной ответственностью "SVOYDOM Astana" Для
+            наших клиентов мы всегда готовы подобрать квартиру по оптимальной
+            цене с учетом ваших особенных пожеланий как для комфортной жизни,
+            так для создания и ведения успешного бизнеса.
+          </p>
+          <p>Все права защищены &copy; 2023</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+    <script>
+      let center2 = [55.707076, 37.385825];
+      let center3 = [55.847076, 37.485825];
+      let center4 = [55.687076, 36.885825];
+
+      function init() {
+        let map = new ymaps.Map("map2", {
+          center: center2,
+          zoom: 9,
+          controls: [],
+        });
+
+        let placemark2 = new ymaps.Placemark(
+          center2,
+          {
+            balloonContent: `
+            
+    <div class="balloon-wrap">
+      <div class="img-wrap">
+        <img src="img/balloon-img.jpg" alt="" />
+      </div>
+      <div class="bottom-wrap">
+      <span class="address"
+        >Адрес г. Алматы ул. Макатаева 129в, Алматы 050000</span
+      >
+    </div>
+    </div>
+            
+            `,
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "img/map-marker.svg",
+            iconImageOffset: [0, 0],
+            iconImageSize: [100, 34],
+            hideIconOnBalloonOpen: false,
+          }
+        );
+
+        map.geoObjects.add(placemark2);
+        map.behaviors.disable("scrollZoom");
+      }
+      ymaps.ready(init);
+    </script>
+
+    <script>
+      // RangeSlider 1 - start
+      var rangeSlider_1 = document.getElementById("range-slider-1");
+      var input1_1 = document.getElementById("input1-1");
+      var input1_2 = document.getElementById("input1-2");
+      var inputs_1 = [input1_1, input1_2];
+
+      noUiSlider.create(rangeSlider_1, {
+        start: [0, 200],
+        connect: true,
+        range: {
+          min: 0,
+          max: 200,
+        },
+        format: {
+          to: (v) => v | 0,
+          from: (v) => v | 0,
+        },
+      });
+
+      rangeSlider_1.noUiSlider.on("update", function (values, handle) {
+        inputs_1[handle].value = values[handle];
+      });
+
+      inputs_1.forEach(function (input, handle) {
+        input.addEventListener("change", function () {
+          rangeSlider_1.noUiSlider.setHandle(handle, this.value);
+        });
+      });
+      // RangeSlider 1 - end
+
+      // RangeSlider 2 - start
+      var rangeSlider_2 = document.getElementById("range-slider-2");
+      var input2_1 = document.getElementById("input2-1");
+      var input2_2 = document.getElementById("input2-2");
+      var inputs_2 = [input2_1, input2_2];
+
+      noUiSlider.create(rangeSlider_2, {
+        start: [0, 1000000],
+        connect: true,
+        range: {
+          min: 0,
+          max: 1000000,
+        },
+        format: {
+          to: (v) => v | 0,
+          from: (v) => v | 0,
+        },
+      });
+
+      rangeSlider_2.noUiSlider.on("update", function (values, handle) {
+        inputs_2[handle].value = values[handle];
+      });
+
+      inputs_2.forEach(function (input, handle) {
+        input.addEventListener("change", function () {
+          rangeSlider_2.noUiSlider.setHandle(handle, this.value);
+        });
+      });
+      // RangeSlider 2 - end
+    </script>
+  </body>
+</html>

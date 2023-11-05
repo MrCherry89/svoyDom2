@@ -40,10 +40,10 @@ $(document).ready(function () {
     $(this).closest("li").find(".sub-menu").toggleClass("open");
   });
 
-  $slickGreen = false;
-  function greenSlider() {
+  $bannerSlider = false;
+  function slider() {
     if ($(window).width() < 1025) {
-      if (!$slickGreen) {
+      if (!$bannerSlider) {
         $(".banner-slider").slick({
           dots: true,
           arrows: false,
@@ -64,20 +64,100 @@ $(document).ready(function () {
             },
           ],
         });
-        $slickGreen = true;
+        $bannerSlider = true;
       }
     } else if ($(window).width() > 1025) {
-      if ($slickGreen) {
+      if ($bannerSlider) {
         $(".banner-slider").slick("unslick");
-        $slickGreen = false;
+        $bannerSlider = false;
       }
     }
   }
 
-  greenSlider();
+  slider();
 
   $(window).on("resize", function () {
-    greenSlider();
+    slider();
+  });
+
+  $newsIn = false;
+  function slider2() {
+    if ($(window).width() < 1025) {
+      if (!$newsIn) {
+        $(".news-in-slider").slick({
+          dots: true,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+          infinite: false,
+          responsive: [
+            {
+              breakpoint: 501,
+              settings: {
+                dots: true,
+                arrows: false,
+                infinite: false,
+                variableWidth: false,
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+        $newsIn = true;
+      }
+    } else if ($(window).width() > 1025) {
+      if ($newsIn) {
+        $(".news-in-slider").slick("unslick");
+        $newsIn = false;
+      }
+    }
+  }
+
+  slider2();
+
+  $(window).on("resize", function () {
+    slider2();
+  });
+
+  $news = false;
+  function slider3() {
+    if ($(window).width() < 1025) {
+      if (!$news) {
+        $(".news-slider").slick({
+          dots: true,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          variableWidth: true,
+          infinite: false,
+          responsive: [
+            {
+              breakpoint: 501,
+              settings: {
+                dots: true,
+                arrows: false,
+                infinite: false,
+                variableWidth: false,
+                slidesToShow: 1,
+              },
+            },
+          ],
+        });
+        $news = true;
+      }
+    } else if ($(window).width() > 1025) {
+      if ($news) {
+        $(".news-slider").slick("unslick");
+        $news = false;
+      }
+    }
+  }
+
+  slider3();
+
+  $(window).on("resize", function () {
+    slider3();
   });
 
   $(".drop-menu").on("click", function () {

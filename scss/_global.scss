@@ -707,7 +707,7 @@ a {
           @include dir-col;
           align-items: flex-start;
           padding: 20px;
-          padding-bottom: 80px;
+          padding-bottom: 85px;
           transition: 0.3s;
           transform: translateY(-100%);
           visibility: hidden;
@@ -791,7 +791,7 @@ a {
             }
             @media (max-width: 1024px) {
               margin: 0;
-              margin-bottom: 20px;
+              margin-bottom: 25px;
               margin-top: 20px;
               min-width: 50px;
             }
@@ -842,7 +842,7 @@ a {
             margin-left: 10px;
           }
           @media (max-width: 1024px) {
-            display: none;
+            margin-left: 5px;
           }
           svg {
             transition: 0.3s;
@@ -858,7 +858,8 @@ a {
           display: none;
           @media (max-width: 1024px) {
             display: inline-block;
-            margin-left: 20px;
+            margin-left: 15px;
+            order: 1;
           }
         }
         .icon-select {
