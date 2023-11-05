@@ -179,5 +179,17 @@ $(document).ready(function () {
     $(".tab-content-item").eq(index).addClass("active");
   });
 
+  $(".favorite-icon").on("click", function () {
+    $(this).addClass("remove");
+  });
+
+  $(".favorite-icon2").on("click", function () {
+    $(this).addClass("add");
+  });
+
+  $(".load-more").on("click", function () {
+    $(".news-items .news-item").removeClass("hide");
+  });
+
   AOS.init();
 });
