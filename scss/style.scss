@@ -1273,11 +1273,12 @@
     @media (max-width: 767px) {
       @include dir-col;
     }
-    .info {
+    .contact-info-wrap {
       width: 45%;
-      @media (max-width: 767px) {
-        width: 100%;
-      }
+      padding-right: 20px;
+    }
+    .info {
+      width: 100%;
       .main-title {
         line-height: 90%;
         margin-bottom: 20px;
@@ -1318,17 +1319,23 @@
           }
         }
       }
-    }
-    #map2 {
-      height: 420px;
-      width: 55%;
-      border-radius: 10px;
-      overflow: hidden;
-      @media (max-width: 767px) {
-        width: 100%;
-        height: 280px;
-        margin-top: 40px;
+      #map2,
+      #map {
+        height: 420px;
+        width: 55%;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: -120px;
+        @media (max-width: 767px) {
+          width: 100%;
+          height: 280px;
+          margin-top: 40px;
+        }
       }
+    }
+    .tab-content-item {
+      @include flex;
+      width: 100%;
     }
   }
 }
@@ -1343,6 +1350,11 @@
     .style2 {
       align-self: flex-start;
       margin-bottom: 40px;
+    }
+    .title-wrap {
+      h2 {
+        margin-bottom: 0px;
+      }
     }
     .tab-content {
       margin-top: 40px;
@@ -2346,9 +2358,9 @@
 }
 
 .loyalty-programs {
-  margin-bottom: 80px;
+  margin: 80px 0;
   @media (max-width: 1024px) {
-    margin-bottom: 50px;
+    margin: 50px 0;
   }
   .wrapper {
     .programs-items {
@@ -2460,20 +2472,367 @@
   }
 }
 
-.wslider {
-  background: $lGreen;
-  height: 600px;
-  width: 100%;
-  color: white;
-  font-size: 48px;
-  font-weight: 600;
-  text-align: center;
-  @include flex;
-  @include align-center;
-  @include justify-center;
-  margin: 80px 0;
+.faq-wrap {
+  .wrapper {
+    .main-title {
+      margin-bottom: 20px;
+    }
+    > p {
+      margin-bottom: 70px;
+      color: #4f4f4f;
+    }
+  }
+}
+
+.global-slider-wrap {
+  margin-top: 80px;
+  @media (max-width: 767px) {
+    margin-top: 50px;
+  }
+  .wrapper {
+    .title-wrapper {
+      margin-bottom: 30px;
+      .date {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 5px;
+        color: #a5a5a5;
+      }
+    }
+  }
+  &.mt0 {
+    margin-top: 0;
+  }
+  &.style2 {
+    margin-bottom: 80px;
+    @media (max-width: 767px) {
+      margin-bottom: 50px;
+    }
+    .wrapper {
+      @include flex;
+      @include dir-col;
+    }
+    .green-btn {
+      margin-top: 24px;
+      align-self: flex-start;
+    }
+  }
+}
+
+.swiper-pagination {
+  display: none;
   @media (max-width: 1024px) {
-    margin: 80px 0 50px;
-    height: 300px;
+    @include flex;
+    @include justify-center;
+  }
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 8px;
+  .dots-wrap {
+    border-top: 1px solid #e4e4e4;
+    position: relative;
+    padding-top: 30px;
+    .dot {
+      position: absolute;
+      top: -5px;
+      border-radius: 50%;
+      background: #cecece;
+      width: 8px;
+      height: 8px;
+      &.green {
+        background: $green;
+        width: 12px;
+        height: 12px;
+        top: -7px;
+      }
+      &.dot1 {
+        left: 10%;
+      }
+      &.dot2 {
+        left: 30%;
+      }
+      &.dot3 {
+        left: 50%;
+      }
+      &.dot4 {
+        left: 70%;
+      }
+      &.dot5 {
+        left: 90%;
+      }
+    }
+  }
+  .swiper-wrapper {
+    margin-bottom: 30px;
+  }
+  > .text {
+    width: 100%;
+    font-size: 16px;
+    color: #4f4f4f;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  @media (max-width: 1480px) {
+    width: 25vw;
+    height: 20vw;
+  }
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+  &:after {
+    content: "";
+    height: 80%;
+    width: 100%;
+    bottom: -15%;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(transparent 0%, #000000 100%);
+    transition: 0.3s;
+    opacity: 0;
+    @media (max-width: 1024px) {
+      content: none;
+    }
+  }
+  .info {
+    @media (max-width: 1024px) {
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      &:after {
+        content: "";
+        height: 80%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background: linear-gradient(transparent 0%, #000000 100%);
+        transition: 0.3s;
+      }
+    }
+  }
+  > img {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .number {
+    background: white;
+    @include flex;
+    @include align-center;
+    @include justify-center;
+    position: absolute;
+    top: 20px;
+    width: 38px;
+    border-radius: 50px;
+    height: 38px;
+    left: 20px;
+    font-size: 14px;
+    color: #4f4f4f;
+  }
+  .texts {
+    @include flex;
+    @include dir-col;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    transition: 0.3s;
+    z-index: 1;
+    opacity: 0;
+    span {
+      font-size: 14px;
+      color: white;
+    }
+    b {
+      font-weight: 600;
+      font-size: 24px;
+      color: white;
+      display: block;
+      margin: 8px 0;
+      @media (max-width: 1480px) {
+        font-size: 20px;
+        margin: 5px 0;
+      }
+    }
+  }
+  > .text {
+    width: 100%;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #4f4f4f;
+    display: none;
+    @media (max-width: 1024px) {
+      display: inline-block;
+    }
+  }
+  &.swiper-slide-active {
+    &:after {
+      opacity: 1;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .number {
+      display: none;
+    }
+    .texts {
+      opacity: 1;
+    }
+  }
+}
+
+.current-projects-banner {
+  margin-bottom: 80px;
+  @media (max-width: 767px) {
+    margin-bottom: 50px;
+  }
+  .wrapper {
+    .top-info {
+      padding: 50px;
+      padding-right: 0;
+      background: #eafbe4;
+      border-radius: 10px;
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      margin-bottom: 16px;
+      @media (max-width: 1300px) {
+        padding: 40px 20px;
+      }
+      @media (max-width: 767px) {
+        padding: 0;
+      }
+      .text-wrap {
+        max-width: 650px;
+        @media (max-width: 1300px) {
+          max-width: inherit;
+          width: 55%;
+        }
+        @media (max-width: 767px) {
+          padding: 15px;
+          width: 100%;
+        }
+        h1 {
+          font-size: 48px;
+          margin-top: 15px;
+          color: #000;
+          @media (max-width: 1024px) {
+            font-size: 32px;
+          }
+          @media (max-width: 767px) {
+            font-size: 24px;
+            margin-top: 10px;
+          }
+        }
+        .grey-btn {
+          margin-top: 24px;
+          background: white;
+          color: #141414;
+          @media (max-width: 767px) {
+            max-width: 470px;
+            width: 100%;
+            margin: 16px auto 0;
+            padding: 10px 30px;
+          }
+        }
+        p {
+          margin-top: 15px;
+          color: #4f4f4f;
+          @media (max-width: 767px) {
+            font-size: 14px;
+            margin-top: 10px;
+          }
+        }
+      }
+      .img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 0;
+        @media (max-width: 1300px) {
+          width: 42vw;
+        }
+        @media (max-width: 767px) {
+          position: static;
+          width: 100%;
+        }
+      }
+      .img2 {
+        position: absolute;
+        bottom: 30px;
+        right: 10%;
+        z-index: -1;
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+    }
+    .bottom-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+      }
+      .info {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border-radius: 10px;
+        padding: 20px 25px;
+        position: relative;
+        @media (max-width: 767px) {
+          @include flex;
+          @include align-center;
+          @include justify-between;
+          padding: 10px 15px;
+        }
+        .text {
+          font-size: 24px;
+          font-weight: 600;
+          color: #141414;
+          @media (max-width: 767px) {
+            font-size: 20px;
+          }
+        }
+        .number {
+          font-size: 70px;
+          line-height: 50px;
+          color: $green;
+          position: absolute;
+          bottom: 0;
+          font-weight: 600;
+          right: 30px;
+          @media (max-width: 1024px) {
+            font-size: 50px;
+            line-height: inherit;
+            position: static;
+          }
+          @media (max-width: 767px) {
+            font-size: 36px;
+          }
+        }
+      }
+    }
   }
 }
