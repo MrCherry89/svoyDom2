@@ -1412,6 +1412,12 @@
                   transition: 0.3s;
                   fill: #cecece;
                   width: 12px;
+                  &.favorite-icon3 {
+                    fill: #cecece;
+                    &.add {
+                      fill: $lGreen;
+                    }
+                  }
                 }
                 &:last-child {
                   margin-bottom: 0;

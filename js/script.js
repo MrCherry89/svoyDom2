@@ -187,6 +187,11 @@ $(document).ready(function () {
     $(this).addClass("add");
   });
 
+  $(".favorite-icon3").on("click", function (e) {
+    e.preventDefault();
+    $(this).addClass("add");
+  });
+
   $(".load-more").on("click", function () {
     $(".news-items .news-item").removeClass("hide");
   });

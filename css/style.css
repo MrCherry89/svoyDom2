@@ -2974,6 +2974,12 @@ a:focus {
   fill: #cecece;
   width: 12px;
 }
+.apartments-wrap .wrapper .tab-content .tab-content-item .apartments-items1 .favorites-item2 .icons .icon svg.favorite-icon3 {
+  fill: #cecece;
+}
+.apartments-wrap .wrapper .tab-content .tab-content-item .apartments-items1 .favorites-item2 .icons .icon svg.favorite-icon3.add {
+  fill: #008b3b;
+}
 .apartments-wrap .wrapper .tab-content .tab-content-item .apartments-items1 .favorites-item2 .icons .icon:last-child {
   margin-bottom: 0;
 }
