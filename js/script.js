@@ -196,5 +196,50 @@ $(document).ready(function () {
     $(".news-items .news-item").removeClass("hide");
   });
 
+  $(".accordion-list-item .item-heading").on("click", function (e) {
+    e.preventDefault();
+    if ($(this).find("span").hasClass("minus")) {
+      $(this).find("span").removeClass("minus");
+    } else {
+      $(".accordion-list-item span").removeClass("minus");
+      $(this).find("span").addClass("minus");
+    }
+    $(".accordion-list-item").removeClass("opened");
+    $(".item-body").removeClass("active");
+    $(this)
+      .closest(".accordion-list-item")
+      .find(".item-body")
+      .addClass("active");
+    $(this).closest(".accordion-list-item").addClass("opened");
+    $(".item-body:not(.active)").slideUp();
+    $(".accordion-list-item:not(.opened)").removeClass("active");
+    $(this).closest(".accordion-list-item").find(".item-body").slideToggle();
+    $(this).closest(".accordion-list-item").toggleClass("active");
+  });
+
+  $(".tabs-menu > li a").on("click", function (e) {
+    e.preventDefault();
+    $(".tabs-menu > li").removeClass("active");
+    $(this).closest("li").addClass("active");
+    var index = $(this).closest("li").index();
+    $(".tab-content-wrap .tab-content").removeClass("active");
+    $(".tab-content-wrap .tab-content").eq(index).addClass("active");
+
+    var selectedTab = $(this).closest("li").data("index");
+
+    $("#tab-select").val(selectedTab);
+    $("#tab-select").trigger("change");
+  });
+
+  $("#tab-select").on("change", function (e) {
+    var selectedTab = $(this).val();
+    var index = parseInt($(this).val()) - 1;
+
+    $(".tabs-menu > li").removeClass("active");
+    $(".tabs-menu > li").eq(index).addClass("active");
+    $(".tab-content-wrap .tab-content").removeClass("active");
+    $(".tab-content-wrap .tab-content").eq(index).addClass("active");
+  });
+
   AOS.init();
 });
