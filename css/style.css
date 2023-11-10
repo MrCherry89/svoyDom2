@@ -3336,6 +3336,11 @@ a:focus {
   z-index: 0;
   margin-right: -10px;
 }
+@media (max-width: 767px) {
+  .apartments-wrap .wrapper .apartment-search-info {
+    margin-right: 0;
+  }
+}
 .apartments-wrap .wrapper .apartment-search-info .tab-menu {
   margin-left: auto;
   margin-top: auto;

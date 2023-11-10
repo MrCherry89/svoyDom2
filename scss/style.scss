@@ -1487,6 +1487,9 @@
       position: relative;
       z-index: 0;
       margin-right: -10px;
+      @media (max-width: 767px) {
+        margin-right: 0;
+      }
       .tab-menu {
         margin-left: auto;
         margin-top: auto;
