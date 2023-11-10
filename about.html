@@ -109,8 +109,12 @@
             полезными!
           </p>
           <div class="about-buttons">
-            <a href="#" class="grey-btn">Наш Youtube</a>
-            <a href="#" class="grey-btn">Наш Instagram</a>
+            <a href="https://www.youtube.com/@svoydomkz" class="grey-btn"
+              >Наш Youtube</a
+            >
+            <a href="https://www.instagram.com/svoydom.kz/" class="grey-btn"
+              >Наш Instagram</a
+            >
           </div>
         </div>
       </div>
@@ -647,31 +651,41 @@
 
     <script>
       var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        centeredSlides: false,
+        slideToClickedSlide: false,
+        grabCursor: false,
+        centeredSlides: false,
+        loop: false,
+        height: 200,
+        spaceBetween: 20,
         effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 3,
-        slideToClickedSlide: true,
-        loop: true,
-        // breakpoints: {
-        //   480: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 40,
-        //   },
-        //   "@640": {
-        //     slidesPerView: 5,
-        //     spaceBetween: 50,
-        //   },
-        // },
         coverflowEffect: {
           rotate: 0,
-          stretch: 20,
-          depth: 200,
+          stretch: 0,
+          depth: 0,
           modifier: 1,
           slideShadows: false,
         },
         pagination: {
           el: ".swiper-pagination",
+        },
+        breakpoints: {
+          1025: {
+            slidesPerView: 3,
+            slideToClickedSlide: true,
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            speed: 800,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 20,
+              depth: 200,
+              modifier: 1,
+              slideShadows: false,
+            },
+          },
         },
       });
     </script>

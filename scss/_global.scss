@@ -1282,3 +1282,60 @@ a {
     }
   }
 }
+
+.tour-3d {
+  margin-top: 80px;
+  @media (max-width: 767px) {
+    margin-top: 50px;
+  }
+  .wrapper {
+    .title-wrap {
+      @include flex;
+      @include justify-between;
+      @media (max-width: 767px) {
+        @include dir-col;
+      }
+      .section-container {
+        @include flex;
+        @media (max-width: 767px) {
+          @include justify-center;
+          margin-top: 24px;
+        }
+        .sections {
+          font-size: 16px;
+          transition: 0.3s;
+          border-radius: 50px;
+          color: #141414;
+          background: #f4f4f4;
+          padding: 10px 28px;
+          margin-left: 16px;
+          cursor: pointer;
+          @media (max-width: 767px) {
+            margin: 0 8px;
+            font-size: 14px;
+            padding: 8px 24px;
+          }
+          &.active {
+            color: #fff;
+            background: $green;
+          }
+        }
+      }
+    }
+  }
+}
+
+#panorama {
+  width: 100%;
+  height: 480px;
+  position: relative;
+  z-index: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  @media (max-width: 1200px) {
+    height: 40vw;
+  }
+  @media (max-width: 767px) {
+    height: 60vw;
+  }
+}

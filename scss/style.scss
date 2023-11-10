@@ -1065,13 +1065,13 @@
     .breadcrumbs-menu {
       @include flex;
       @include flex-wrap;
+      overflow: hidden;
       li {
         margin-right: 22px;
         margin-bottom: 15px;
         position: relative;
         z-index: 0;
         @media (max-width: 767px) {
-          margin-right: 10px;
           margin-bottom: 10px;
         }
         &:after {
@@ -1086,9 +1086,6 @@
           left: -15px;
           width: 7px;
           height: 11px;
-          @media (max-width: 767px) {
-            content: none;
-          }
         }
         &:first-child {
           &:after {
@@ -1108,9 +1105,6 @@
             right: -15px;
             width: 7px;
             height: 11px;
-            @media (max-width: 767px) {
-              content: none;
-            }
           }
         }
         a {
@@ -1276,6 +1270,9 @@
     .contact-info-wrap {
       width: 45%;
       padding-right: 20px;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
     }
     .info {
       width: 100%;
@@ -1336,6 +1333,9 @@
     .tab-content-item {
       @include flex;
       width: 100%;
+      @media (max-width: 767px) {
+        @include dir-col;
+      }
     }
   }
 }
@@ -1522,15 +1522,27 @@
       }
       .select-wrap {
         margin-bottom: 20px;
+        @media (max-width: 767px) {
+          margin-bottom: 14px;
+        }
       }
       .range-info {
         margin-bottom: 20px;
+        @media (max-width: 767px) {
+          margin-bottom: 14px;
+        }
       }
       .grey-btn {
         margin-right: 10px;
+        @media (max-width: 767px) {
+          margin-right: 0;
+        }
       }
       > a {
         margin-bottom: 20px;
+        @media (max-width: 767px) {
+          margin-bottom: 14px;
+        }
       }
     }
   }
@@ -2509,6 +2521,11 @@
     .green-btn {
       margin-top: 24px;
       align-self: flex-start;
+      @media (max-width: 767px) {
+        margin: 24px auto 0;
+        max-width: 470px;
+        width: 100%;
+      }
     }
   }
 }
@@ -2519,6 +2536,19 @@
     @include flex;
     @include justify-center;
   }
+  .swiper-pagination-bullet {
+    width: 16px;
+    height: 6px;
+    border-radius: 50px;
+    background: #e4e4e4;
+    opacity: 1;
+    margin: 0 3px;
+    transition: 0.5s;
+    &.swiper-pagination-bullet-active {
+      background: $lGreen;
+      width: 32px;
+    }
+  }
 }
 
 .swiper {
@@ -2528,6 +2558,7 @@
     border-top: 1px solid #e4e4e4;
     position: relative;
     padding-top: 30px;
+
     .dot {
       position: absolute;
       top: -5px;
@@ -2535,6 +2566,9 @@
       background: #cecece;
       width: 8px;
       height: 8px;
+      @media (max-width: 1024px) {
+        display: none;
+      }
       &.green {
         background: $green;
         width: 12px;
@@ -2619,6 +2653,9 @@
         background: linear-gradient(transparent 0%, #000000 100%);
         transition: 0.3s;
       }
+      img {
+        width: 100%;
+      }
     }
   }
   > img {
@@ -2667,8 +2704,8 @@
   }
   > .text {
     width: 100%;
-    margin-top: 30px;
-    font-size: 16px;
+    margin-top: 16px;
+    font-size: 14px;
     color: #4f4f4f;
     display: none;
     @media (max-width: 1024px) {
@@ -2688,6 +2725,9 @@
     }
     .number {
       display: none;
+      @media (max-width: 1024px) {
+        @include flex;
+      }
     }
     .texts {
       opacity: 1;

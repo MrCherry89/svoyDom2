@@ -17,6 +17,10 @@
     <link rel="stylesheet" href="css/aos.css" />
     <link
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
@@ -1517,6 +1521,33 @@
       </div>
     </div>
 
+    <div class="tour-3d">
+      <div class="wrapper">
+        <div class="title-wrap">
+          <h2
+            class="main-title"
+            data-aos="fade-right"
+            data-aos-offset="-100"
+            data-aos-delay="100"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+          >
+            360 тур
+          </h2>
+          <div class="section-container">
+            <div id="sec5" class="sections active">Фасад</div>
+            <div id="sec6" class="sections">Двор</div>
+            <div id="sec7" class="sections">Холл</div>
+          </div>
+        </div>
+        <div class="tour-3d-wrap">
+          <div class="panorama_container active">
+            <div id="panorama"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="contact-us">
       <div class="wrapper">
         <div class="title-wrap">
@@ -1633,6 +1664,7 @@
     <script src="js/select2.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="js/script.js"></script>
@@ -1748,35 +1780,78 @@
 
     <script>
       var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        centeredSlides: false,
+        slideToClickedSlide: false,
+        grabCursor: false,
+        centeredSlides: false,
+        loop: false,
+        height: 200,
+        spaceBetween: 20,
         effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 3,
-        slideToClickedSlide: true,
-        loop: true,
-        // breakpoints: {
-        //   1199: {
-        //     slidesPerView: 3,
-        //   },
-        //   991: {
-        //     slidesPerView: 2,
-        //     centeredSlides: false,
-        //   },
-        //   767: {
-        //     slidesPerView: 1,
-        //   },
-        // },
         coverflowEffect: {
           rotate: 0,
-          stretch: 20,
-          depth: 200,
+          stretch: 0,
+          depth: 0,
           modifier: 1,
           slideShadows: false,
         },
         pagination: {
           el: ".swiper-pagination",
         },
+        breakpoints: {
+          1025: {
+            slidesPerView: 3,
+            slideToClickedSlide: true,
+            grabCursor: true,
+            centeredSlides: true,
+            loop: true,
+            speed: 800,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 20,
+              depth: 200,
+              modifier: 1,
+              slideShadows: false,
+            },
+          },
+        },
       });
+    </script>
+
+    <script>
+      const images = [
+        "./img/1.png",
+        "./img/2.png",
+        "./img/3.png",
+        "./img/4.png",
+      ];
+
+      const sectionContainers = document.querySelectorAll(".sections");
+
+      const generatorPanorama = (index) => {
+        if (currentIndex === index) {
+          return;
+        }
+        pannellum.viewer("panorama", {
+          type: "equirectangular",
+          panorama: images[index],
+          autoLoad: true,
+          showControls: false,
+          compass: false,
+        });
+        currentIndex = index;
+      };
+
+      let currentIndex = null;
+
+      sectionContainers.forEach((section, index) => {
+        section.addEventListener("click", () => {
+          generatorPanorama(index);
+        });
+      });
+
+      generatorPanorama(0);
     </script>
   </body>
 </html>

@@ -241,5 +241,10 @@ $(document).ready(function () {
     $(".tab-content-wrap .tab-content").eq(index).addClass("active");
   });
 
+  $(".section-container .sections").on("click", function () {
+    $(".section-container .sections").removeClass("active");
+    $(this).addClass("active");
+  });
+
   AOS.init();
 });
