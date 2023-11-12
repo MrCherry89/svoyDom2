@@ -4741,40 +4741,6 @@ a:focus {
   position: relative;
   padding-top: 30px;
 }
-.swiper .dots-wrap .dot {
-  position: absolute;
-  top: -5px;
-  border-radius: 50%;
-  background: #cecece;
-  width: 8px;
-  height: 8px;
-}
-@media (max-width: 1024px) {
-  .swiper .dots-wrap .dot {
-    display: none;
-  }
-}
-.swiper .dots-wrap .dot.green {
-  background: #0e6131;
-  width: 12px;
-  height: 12px;
-  top: -7px;
-}
-.swiper .dots-wrap .dot.dot1 {
-  left: 10%;
-}
-.swiper .dots-wrap .dot.dot2 {
-  left: 30%;
-}
-.swiper .dots-wrap .dot.dot3 {
-  left: 50%;
-}
-.swiper .dots-wrap .dot.dot4 {
-  left: 70%;
-}
-.swiper .dots-wrap .dot.dot5 {
-  left: 90%;
-}
 .swiper .swiper-wrapper {
   margin-bottom: 30px;
 }
@@ -4782,13 +4748,26 @@ a:focus {
   width: 100%;
   font-size: 16px;
   color: #4f4f4f;
+  transition: 1s;
 }
 @media (max-width: 1024px) {
   .swiper > .text {
     display: none;
   }
 }
+.swiper > .text.animate {
+  animation-duration: 1s;
+  animation-name: zoom;
+}
 
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 .swiper-slide {
   background-position: center;
   background-size: cover;
@@ -4853,26 +4832,6 @@ a:focus {
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
-}
-.swiper-slide .number {
-  background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  position: absolute;
-  top: 20px;
-  width: 38px;
-  border-radius: 50px;
-  height: 38px;
-  left: 20px;
-  font-size: 14px;
-  color: #4f4f4f;
 }
 .swiper-slide .texts {
   display: -webkit-box;

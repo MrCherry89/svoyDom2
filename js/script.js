@@ -253,5 +253,10 @@ $(document).ready(function () {
     $(".hover-img-wrap img").attr("src", value);
   });
 
+  $(".swiper-slide").on("click", function () {
+    var text = $(this).find(".text").text();
+    $("#slide-text").text(text);
+  });
+
   AOS.init();
 });

@@ -2558,38 +2558,38 @@
     position: relative;
     padding-top: 30px;
 
-    .dot {
-      position: absolute;
-      top: -5px;
-      border-radius: 50%;
-      background: #cecece;
-      width: 8px;
-      height: 8px;
-      @media (max-width: 1024px) {
-        display: none;
-      }
-      &.green {
-        background: $green;
-        width: 12px;
-        height: 12px;
-        top: -7px;
-      }
-      &.dot1 {
-        left: 10%;
-      }
-      &.dot2 {
-        left: 30%;
-      }
-      &.dot3 {
-        left: 50%;
-      }
-      &.dot4 {
-        left: 70%;
-      }
-      &.dot5 {
-        left: 90%;
-      }
-    }
+    // .dot {
+    //   position: absolute;
+    //   top: -5px;
+    //   border-radius: 50%;
+    //   background: #cecece;
+    //   width: 8px;
+    //   height: 8px;
+    //   @media (max-width: 1024px) {
+    //     display: none;
+    //   }
+    //   &.green {
+    //     background: $green;
+    //     width: 12px;
+    //     height: 12px;
+    //     top: -7px;
+    //   }
+    //   &.dot1 {
+    //     left: 10%;
+    //   }
+    //   &.dot2 {
+    //     left: 30%;
+    //   }
+    //   &.dot3 {
+    //     left: 50%;
+    //   }
+    //   &.dot4 {
+    //     left: 70%;
+    //   }
+    //   &.dot5 {
+    //     left: 90%;
+    //   }
+    // }
   }
   .swiper-wrapper {
     margin-bottom: 30px;
@@ -2598,9 +2598,24 @@
     width: 100%;
     font-size: 16px;
     color: #4f4f4f;
+    transition: 1s;
     @media (max-width: 1024px) {
       display: none;
     }
+    &.animate {
+      animation-duration: 1s;
+      animation-name: zoom;
+    }
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
   }
 }
 
@@ -2661,20 +2676,6 @@
     border-radius: 10px;
     overflow: hidden;
     width: 100%;
-  }
-  .number {
-    background: white;
-    @include flex;
-    @include align-center;
-    @include justify-center;
-    position: absolute;
-    top: 20px;
-    width: 38px;
-    border-radius: 50px;
-    height: 38px;
-    left: 20px;
-    font-size: 14px;
-    color: #4f4f4f;
   }
   .texts {
     @include flex;
