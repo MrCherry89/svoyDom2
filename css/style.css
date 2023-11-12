@@ -1261,6 +1261,7 @@ a:focus {
   border-radius: 10px;
   background: #f9f9f9;
   padding: 15px;
+  cursor: default;
 }
 @media (max-width: 767px) {
   .apartment-info .wrapper .apartment-info-wrap .info {
@@ -1273,6 +1274,19 @@ a:focus {
   margin-bottom: 5px;
   color: #000;
   font-weight: 600;
+  position: relative;
+  z-index: 0;
+}
+.apartment-info .wrapper .apartment-info-wrap .info > b:after {
+  content: "";
+  height: 3px;
+  width: 0;
+  bottom: 3px;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  transition: 0.3s;
+  background: rgba(18, 192, 91, 0.5);
 }
 .apartment-info .wrapper .apartment-info-wrap .info > span {
   display: block;
@@ -1283,11 +1297,15 @@ a:focus {
     font-size: 14px;
   }
 }
+.apartment-info .wrapper .apartment-info-wrap .info:hover b:after {
+  width: 100%;
+}
 .apartment-info .wrapper .apartment-info-wrap .prices {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-top: 20px;
+  transition: 0.3s;
 }
 @media (max-width: 767px) {
   .apartment-info .wrapper .apartment-info-wrap .prices {
@@ -1299,6 +1317,9 @@ a:focus {
   border-radius: 10px;
   background: #f9f9f9;
   padding: 25px 20px;
+  border: 1px solid transparent;
+  cursor: default;
+  transition: 0.3s;
 }
 @media (max-width: 767px) {
   .apartment-info .wrapper .apartment-info-wrap .prices .price-info {
@@ -1334,6 +1355,12 @@ a:focus {
 .apartment-info .wrapper .apartment-info-wrap .prices .price-info.active {
   background: #fff;
   border: 1px solid #e4e4e4;
+}
+.apartment-info .wrapper .apartment-info-wrap .prices .price-info:hover {
+  border-color: #d0d0d0;
+}
+.apartment-info .wrapper .apartment-info-wrap .prices .price-info:hover .price-info {
+  border-color: #d0d0d0;
 }
 
 .accordion-list li {
