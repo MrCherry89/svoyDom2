@@ -246,5 +246,12 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 
+  $(".links button").hover(function () {
+    $(".links button").removeClass("active");
+    $(this).addClass("active");
+    var value = $(this).attr("data-src");
+    $(".hover-img-wrap img").attr("src", value);
+  });
+
   AOS.init();
 });

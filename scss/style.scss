@@ -30,8 +30,6 @@
         flex-direction: column-reverse;
         border: none;
       }
-      .footer-menu-wrap {
-      }
       .links {
         @include flex;
         margin-right: 160px;
@@ -1978,8 +1976,6 @@
           height: 100%;
           object-fit: cover;
         }
-      }
-      .text-wrap {
       }
     }
     .big-info {

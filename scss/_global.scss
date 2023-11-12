@@ -720,8 +720,13 @@ a {
         }
         .main-menu {
           margin-bottom: -20px;
+          @media (max-width: 1300px) {
+            @include justify-around;
+            flex-grow: 1;
+          }
           @media (max-width: 1024px) {
             @include dir-col;
+            justify-content: inherit;
           }
           li {
             @media (max-width: 1300px) {
@@ -961,10 +966,49 @@ a {
         .tab-content-item {
           height: 0;
           visibility: hidden;
+          position: relative;
+          z-index: 0;
+          .hover-img-wrap {
+            @include flex;
+            margin: auto;
+            max-width: 70%;
+            transition: 0.5s;
+          }
           img {
             max-width: 100%;
             max-height: 100%;
             margin: auto;
+            transition: 0.5s;
+          }
+          .links {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            @include flex;
+            @include dir-col;
+            button {
+              position: relative;
+              z-index: 0;
+              color: #000;
+              border: 1px solid #4d4d4d;
+              padding: 5px 20px;
+              min-width: 70px;
+              @include flex;
+              margin-top: -1px;
+              @include justify-center;
+              @media (max-width: 767px) {
+                padding: 5px 10px;
+                min-width: 40px;
+              }
+              &:hover {
+                background: $lGreen;
+                color: white;
+              }
+              &.active {
+                background: $lGreen;
+                color: white;
+              }
+            }
           }
           &.active {
             border: 1px solid #ebebeb;
@@ -976,6 +1020,7 @@ a {
             min-height: 480px;
             @media (max-width: 767px) {
               min-height: auto;
+              padding-left: 0;
             }
           }
         }
