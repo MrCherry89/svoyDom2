@@ -4861,11 +4861,6 @@ a:focus {
   width: 100%;
   padding-top: 8px;
 }
-.swiper .dots-wrap {
-  border-top: 1px solid #e4e4e4;
-  position: relative;
-  padding-top: 30px;
-}
 .swiper .swiper-wrapper {
   margin-bottom: 30px;
 }
@@ -4916,21 +4911,11 @@ a:focus {
     position: static;
   }
 }
-.swiper-slide:after {
-  content: "";
-  height: 80%;
-  width: 100%;
-  bottom: -15%;
-  left: 0;
-  position: absolute;
-  background: linear-gradient(transparent 0%, #000000 100%);
-  transition: 0.3s;
-  opacity: 0;
-}
-@media (max-width: 1024px) {
-  .swiper-slide:after {
-    content: none;
-  }
+.swiper-slide .info {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 10px;
 }
 @media (max-width: 1024px) {
   .swiper-slide .info {
@@ -4938,6 +4923,8 @@ a:focus {
     z-index: 0;
     border-radius: 10px;
     overflow: hidden;
+    width: 300px;
+    height: 300px;
   }
   .swiper-slide .info:after {
     content: "";
@@ -4951,6 +4938,22 @@ a:focus {
   }
   .swiper-slide .info img {
     width: 100%;
+  }
+}
+.swiper-slide .info:after {
+  content: "";
+  height: 80%;
+  width: 100%;
+  bottom: -15%;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(transparent 0%, #000000 100%);
+  transition: 0.3s;
+  opacity: 0;
+}
+@media (max-width: 1024px) {
+  .swiper-slide .info:after {
+    content: none;
   }
 }
 .swiper-slide > img {
@@ -4991,18 +4994,26 @@ a:focus {
   }
 }
 .swiper-slide > .text {
-  width: 100%;
-  margin-top: 16px;
+  width: 270%;
+  transform: translateX(-30%);
+  margin-top: 30px;
   font-size: 14px;
   color: #4f4f4f;
-  display: none;
+  background: white;
+}
+.swiper-slide > .text.show {
+  animation: mymove 1s;
 }
 @media (max-width: 1024px) {
   .swiper-slide > .text {
     display: inline-block;
   }
 }
-.swiper-slide.swiper-slide-active:after {
+.swiper-slide.swiper-slide-active {
+  overflow: visible;
+  height: auto;
+}
+.swiper-slide.swiper-slide-active .info:after {
   opacity: 1;
 }
 .swiper-slide.swiper-slide-active img {
@@ -5012,20 +5023,18 @@ a:focus {
   object-fit: cover;
   border-radius: 10px;
 }
-.swiper-slide.swiper-slide-active .number {
-  display: none;
-}
-@media (max-width: 1024px) {
-  .swiper-slide.swiper-slide-active .number {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
 .swiper-slide.swiper-slide-active .texts {
   opacity: 1;
 }
 
+@keyframes mymove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .current-projects-banner {
   margin-bottom: 80px;
 }

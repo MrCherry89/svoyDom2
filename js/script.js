@@ -254,8 +254,9 @@ $(document).ready(function () {
   });
 
   $(".swiper-slide").on("click", function () {
-    var text = $(this).find(".text").text();
-    $("#slide-text").text(text);
+    // var text = $(this).find(".text").text();
+    // $("#slide-text").text(text);
+    $(this).find(".text").toggleClass("show");
   });
 
   gsap.to(".text-animate svg", {

@@ -108,13 +108,6 @@
           </h2>
         </div>
         <div class="swiper mySwiper">
-          <div class="dots-wrap">
-            <!-- <span class="dot dot1"></span>
-            <span class="dot dot2"></span>
-            <span class="dot dot3 green"></span>
-            <span class="dot dot4"></span>
-            <span class="dot dot5"></span> -->
-          </div>
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="info">
@@ -287,13 +280,13 @@
               </p>
             </div>
           </div>
-          <p class="text" id="slide-text">
+          <!-- <p class="text" id="slide-text">
             1 Специально для наших дорогих клиентов мы создали уникальную
             программу лояльности, которая подарит больше возможностей и приятных
             впечатлений! При покупке квартиры в новых строящихся объектах клиент
             автоматически становится участником розыгрыша, главным призом
             которого является +1 комната к текущей покупке.
-          </p>
+          </p> -->
           <div class="swiper-pagination"></div>
         </div>
       </div>
@@ -410,6 +403,8 @@
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/jquery.inputmask.bundle.min.js"></script>
     <script src="js/jquery.validate.js"></script>
     <script src="js/select2.min.js"></script>
@@ -469,7 +464,7 @@
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
         centeredSlides: false,
-        slideToClickedSlide: true,
+        slideToClickedSlide: false,
         grabCursor: false,
         centeredSlides: false,
         loop: false,
