@@ -253,9 +253,82 @@ $(document).ready(function () {
     $(".hover-img-wrap img").attr("src", value);
   });
 
-  $(".swiper-slide").on("click mouseenter", function () {
+  $(".swiper-slide").on("click", function () {
     var text = $(this).find(".text").text();
     $("#slide-text").text(text);
+  });
+
+  gsap.to(".text-animate svg", {
+    scale: 72,
+    duration: 4,
+    x: "-85vw",
+    scrollTrigger: {
+      scrub: -1,
+      start: "top top",
+      end: "bottom",
+      pin: ".text-animate",
+    },
+    onComplete: function () {
+      $(".gsap-wrapper").addClass("hidden");
+      $(".animate-wrap").addClass("visible");
+    },
+    onUpdate: function () {
+      if ($(".gsap-wrapper").hasClass("hidden")) {
+        $(".gsap-wrapper").removeClass("hidden");
+        $(".animate-wrap").removeClass("visible");
+      }
+    },
+  });
+
+  const main = document.querySelector(".main");
+
+  gsap.to(".animate-wrap .info1", {
+    x: "0",
+    scale: 0.5,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".info1",
+      scrub: -1,
+      start: "top top",
+      end: () => main.offsetWidth / 2,
+    },
+  });
+
+  gsap.to(".animate-wrap .info2", {
+    x: "0",
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".info1",
+      scrub: -1,
+      start: "center top",
+      end: () => main.offsetWidth / 2,
+      pin: true,
+    },
+  });
+
+  gsap.to(".animate-wrap .info3", {
+    x: "0",
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".info2",
+      scrub: -1,
+      start: "center top",
+      end: () => main.offsetWidth / 2,
+      pin: true,
+    },
+  });
+
+  gsap.to(".animate-wrap .info4", {
+    x: "0",
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".info3",
+      scrub: -1,
+      start: "center top",
+      end: () => main.offsetWidth / 2,
+      pin: true,
+    },
   });
 
   AOS.init();

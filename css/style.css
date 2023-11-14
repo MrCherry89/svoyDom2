@@ -1645,6 +1645,129 @@ a:focus {
   }
 }
 
+.gsap-wrapper {
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+.gsap-wrapper .hidden {
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.text-animate {
+  padding: 200px 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.text-animate svg {
+  width: 85vw;
+}
+
+.animate-wrap {
+  background: #0e6131;
+  opacity: 0;
+  transition: opacity 0s;
+  position: relative;
+}
+.animate-wrap.visible {
+  opacity: 1;
+}
+.animate-wrap .infos-wrap {
+  height: 500vh;
+}
+.animate-wrap .info {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 40px 20px;
+  transition: 1s;
+}
+.animate-wrap .info.info1 {
+  background: #0e6131;
+  top: 100vh;
+}
+.animate-wrap .info.info2 {
+  background: #075126;
+  top: 200vh;
+  flex-direction: row-reverse;
+  transform: translateX(-100%);
+}
+.animate-wrap .info.info3 {
+  background: #063e1e;
+  top: 300vh;
+  transform: translateX(100%);
+}
+.animate-wrap .info.info4 {
+  background: #032913;
+  top: 400vh;
+  flex-direction: row-reverse;
+  transform: translateX(-100%);
+}
+.animate-wrap .text-wrap {
+  padding: 0 10px;
+  width: 43%;
+}
+.animate-wrap .text-wrap h2 {
+  font-size: 4vw;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.animate-wrap .text-wrap h3 {
+  font-size: 1.2vw;
+  font-weight: 600;
+  color: #ededed;
+  margin-bottom: 24px;
+}
+.animate-wrap .text-wrap p {
+  font-size: 1vw;
+  line-height: 150%;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 20px;
+  max-width: 670px;
+}
+.animate-wrap .img-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 10px;
+  width: 40%;
+}
+.animate-wrap .img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .footer {
   margin-top: 80px;
 }
