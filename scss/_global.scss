@@ -447,6 +447,7 @@ a {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 15px;
+      align-items: baseline;
       @media (max-width: 1300px) {
         grid-template-columns: 1fr 1fr 1fr;
       }
@@ -491,6 +492,7 @@ a {
             font-size: 24px;
             color: #000;
             font-weight: 600;
+            text-align: left;
             display: block;
             @media (max-width: 1024px) {
               font-size: 18px;
@@ -1452,8 +1454,8 @@ a {
     opacity: 1;
   }
   .infos-wrap {
-    height: 600vh;
-    padding-top: 200vh;
+    height: 530vh;
+    padding-top: 130vh;
     margin-top: -100vh;
     transition: background-color 1s ease;
   }

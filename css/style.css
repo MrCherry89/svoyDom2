@@ -483,6 +483,7 @@ a:focus {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
+  align-items: baseline;
 }
 @media (max-width: 1300px) {
   .current-projects .wrapper .projects-items {
@@ -547,6 +548,7 @@ a:focus {
   font-size: 24px;
   color: #000;
   font-weight: 600;
+  text-align: left;
   display: block;
 }
 @media (max-width: 1024px) {
@@ -1689,8 +1691,8 @@ a:focus {
   opacity: 1;
 }
 .animate-wrap .infos-wrap {
-  height: 600vh;
-  padding-top: 200vh;
+  height: 530vh;
+  padding-top: 130vh;
   margin-top: -100vh;
   transition: background-color 1s ease;
 }
@@ -3904,7 +3906,7 @@ a:focus {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-  font-size: 24px;
+  font-size: 22px;
   color: #000;
   display: block;
   transition: 0.3s;
@@ -4404,6 +4406,7 @@ a:focus {
   overflow: hidden;
   z-index: 0;
   min-height: 340px;
+  border-radius: 10px;
 }
 @media (max-width: 767px) {
   .our-team-items-wrap .wrapper .our-team-items .our-team-item .img-wrap {
@@ -4923,8 +4926,8 @@ a:focus {
     z-index: 0;
     border-radius: 10px;
     overflow: hidden;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
   }
   .swiper-slide .info:after {
     content: "";
@@ -4950,11 +4953,6 @@ a:focus {
   background: linear-gradient(transparent 0%, #000000 100%);
   transition: 0.3s;
   opacity: 0;
-}
-@media (max-width: 1024px) {
-  .swiper-slide .info:after {
-    content: none;
-  }
 }
 .swiper-slide > img {
   border-radius: 10px;
@@ -5006,7 +5004,8 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .swiper-slide > .text {
-    display: inline-block;
+    width: 100%;
+    transform: translateX(0);
   }
 }
 .swiper-slide.swiper-slide-active {
