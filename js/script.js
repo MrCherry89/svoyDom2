@@ -256,7 +256,7 @@ $(document).ready(function () {
   gsap.to(".text-animate svg", {
     scale: 72,
     duration: 4,
-    x: "-85vw",
+    x: "-80vw",
     scrollTrigger: {
       scrub: -1,
       start: "top top",
@@ -266,15 +266,23 @@ $(document).ready(function () {
     onComplete: function () {
       $(".gsap-wrapper").addClass("hidden");
       $(".animate-wrap").addClass("visible");
-      $(".header").removeClass("fix");
+      // $(".header").removeClass("fix");
     },
     onUpdate: function () {
       if ($(".gsap-wrapper").hasClass("hidden")) {
         $(".gsap-wrapper").removeClass("hidden");
         $(".animate-wrap").removeClass("visible");
-        $(".header").addClass("fix");
+        // $(".header").addClass("fix");
       }
     },
+  });
+
+  $(window).scroll(function () {
+    var sticky = $(".header"),
+      scroll = $(window).scrollTop();
+
+    if (scroll >= 10) sticky.removeClass("fix");
+    else sticky.addClass("fix");
   });
 
   // const main = document.querySelector(".main");

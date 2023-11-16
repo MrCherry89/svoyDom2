@@ -221,7 +221,59 @@
       </div>
     </div>
 
-    <!-- <footer class="footer">
+    <div class="contact-us">
+      <div class="wrapper">
+        <div class="title-wrap">
+          <h2
+            class="main-title"
+            data-aos="fade-right"
+            data-aos-offset="-100"
+            data-aos-delay="100"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+          >
+            Свяжитесь с нами
+          </h2>
+        </div>
+        <div class="contact-info-wrap">
+          <div class="contact-form-wrap">
+            <img src="img/contact-bg.png" alt="" class="bg" />
+            <h3>Оставьте заявку мы вам обязательно перезвоним!</h3>
+            <p>
+              Заполните форму обратной связи, чтобы задать все интересующие Вас
+              вопросы и оставить запрос на поиск идеальной квартиры.
+            </p>
+            <form class="contact-form">
+              <div class="inputs">
+                <input type="text" placeholder="Ваше имя" />
+                <input
+                  type="tel"
+                  class="phone-number-input"
+                  placeholder="+ 7 700 000 00 00"
+                />
+                <div class="select-wrap">
+                  <select>
+                    <option value="1">Жилой комплекс</option>
+                    <option value="2">Первый</option>
+                    <option value="3">Второй</option>
+                  </select>
+                </div>
+              </div>
+              <div class="btn-wrap">
+                <button class="green-btn" type="button">Оставить заявку</button>
+                <p>
+                  Нажимая кнопку “отправить” вы соглашаетесь с
+                  <a href="#"> политикой обработки данных</a>
+                </p>
+              </div>
+            </form>
+          </div>
+          <div id="map2"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
       <div class="wrapper">
         <div class="footer-top">
           <div class="footer-menu-wrap">
@@ -235,12 +287,8 @@
               <li>
                 <button type="button">Проекты</button>
                 <ul class="sub-menu">
-                  <li>
-                    <a href="current-projects.html">Текущие проекты</a>
-                  </li>
-                  <li>
-                    <a href="completed-projects.html">Завершенные</a>
-                  </li>
+                  <li><a href="current-projects.html">Текущие проекты</a></li>
+                  <li><a href="completed-projects.html">Завершенные</a></li>
                 </ul>
               </li>
             </ul>
@@ -280,7 +328,7 @@
           <p>Все права защищены &copy; 2023</p>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/gsap.min.js"></script>
@@ -293,5 +341,51 @@
     <script src="js/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+
+    <script>
+      let center2 = [55.707076, 37.385825];
+      let center3 = [55.847076, 37.485825];
+      let center4 = [55.687076, 36.885825];
+
+      function init() {
+        let map = new ymaps.Map("map2", {
+          center: center2,
+          zoom: 9,
+          controls: [],
+        });
+
+        let placemark2 = new ymaps.Placemark(
+          center2,
+          {
+            balloonContent: `
+            
+    <div class="balloon-wrap">
+      <div class="img-wrap">
+        <img src="img/balloon-img.jpg" alt="" />
+      </div>
+      <div class="bottom-wrap">
+      <span class="address"
+        >Адрес г. Алматы ул. Макатаева 129в, Алматы 050000</span
+      >
+    </div>
+    </div>
+            
+            `,
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "img/map-marker.svg",
+            iconImageOffset: [0, 0],
+            iconImageSize: [100, 34],
+            hideIconOnBalloonOpen: false,
+          }
+        );
+
+        map.geoObjects.add(placemark2);
+        map.behaviors.disable("scrollZoom");
+      }
+      ymaps.ready(init);
+    </script>
   </body>
 </html>

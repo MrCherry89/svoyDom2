@@ -1051,7 +1051,7 @@ a:focus {
   left: 0;
   z-index: 100;
   width: 100%;
-  animation: opacity 1s;
+  animation: opacity 0.3s;
 }
 .header.fix .breadcrumbs-wrap {
   margin-top: 20px;
@@ -1697,7 +1697,7 @@ a:focus {
   height: 100%;
 }
 .text-animate svg {
-  width: 85vw;
+  width: 80vw;
 }
 
 .animate-wrap {
@@ -1856,7 +1856,7 @@ a:focus {
 }
 
 .color-violet {
-  background: #0e6131;
+  background: #008b3b;
 }
 
 .color-indigo {
