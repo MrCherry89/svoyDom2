@@ -1045,6 +1045,13 @@ a:focus {
   content: "";
   background: url(../img/location-green.svg);
 }
+.header.fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+}
 
 .tab-menu {
   display: -webkit-box;
@@ -1696,6 +1703,13 @@ a:focus {
   margin-top: -100vh;
   transition: background-color 1s ease;
 }
+@media (max-width: 1024px) {
+  .animate-wrap .infos-wrap {
+    height: auto;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
 .animate-wrap .info {
   width: 100%;
   min-height: 100vh;
@@ -1711,15 +1725,66 @@ a:focus {
   padding: 40px 20px;
   transition: background-color 1s ease;
 }
+@media (max-width: 1024px) {
+  .animate-wrap .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .animate-wrap .info.info1 {
+    padding-top: 150px;
+  }
+}
 .animate-wrap .info.info2 {
   flex-direction: row-reverse;
+}
+@media (max-width: 1024px) {
+  .animate-wrap .info.info2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .animate-wrap .info.info3 {
+    padding-bottom: 20px;
+  }
 }
 .animate-wrap .info.info4 {
   flex-direction: row-reverse;
 }
+@media (max-width: 1024px) {
+  .animate-wrap .info.info4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+}
 .animate-wrap .text-wrap {
   padding: 0 10px;
   width: 43%;
+}
+@media (max-width: 1024px) {
+  .animate-wrap .text-wrap {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .animate-wrap .text-wrap {
+    width: 100%;
+    text-align: center;
+  }
 }
 .animate-wrap .text-wrap h2 {
   font-size: 4vw;
@@ -1727,11 +1792,21 @@ a:focus {
   font-weight: 600;
   margin-bottom: 20px;
 }
+@media (max-width: 767px) {
+  .animate-wrap .text-wrap h2 {
+    font-size: 28px;
+  }
+}
 .animate-wrap .text-wrap h3 {
   font-size: 1.2vw;
   font-weight: 600;
   color: #ededed;
   margin-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .animate-wrap .text-wrap h3 {
+    font-size: 22px;
+  }
 }
 .animate-wrap .text-wrap p {
   font-size: 1vw;
@@ -1740,6 +1815,12 @@ a:focus {
   color: white;
   margin-bottom: 20px;
   max-width: 670px;
+}
+@media (max-width: 767px) {
+  .animate-wrap .text-wrap p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 .animate-wrap .img-wrap {
   display: -webkit-box;
@@ -1750,6 +1831,12 @@ a:focus {
   align-items: center;
   padding: 0 10px;
   width: 40%;
+}
+@media (max-width: 767px) {
+  .animate-wrap .img-wrap {
+    width: 100%;
+    max-width: 470px;
+  }
 }
 .animate-wrap .img-wrap img {
   max-width: 100%;
@@ -2778,11 +2865,23 @@ a:focus {
   margin-bottom: 12px;
   min-width: 122px;
 }
+@media (max-width: 1300px) {
+  .apartment-search-info .select-wrap {
+    flex-grow: 1;
+    min-width: 180px;
+  }
+}
+@media (max-width: 1024px) {
+  .apartment-search-info .select-wrap {
+    min-width: 130px;
+  }
+}
 @media (max-width: 767px) {
   .apartment-search-info .select-wrap {
     margin: 0;
     width: calc((100% - 15px) / 2);
     margin-bottom: 15px;
+    flex-grow: 0;
   }
   .apartment-search-info .select-wrap.full {
     width: 100%;
@@ -4657,8 +4756,12 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .loyalty-programs .wrapper .programs-items {
+    gap: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .loyalty-programs .wrapper .programs-items {
     grid-template-columns: 1fr;
-    gap: 16px;
   }
 }
 .loyalty-programs .wrapper .programs-items .programs-item {
@@ -4739,7 +4842,7 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .loyalty-programs .wrapper .programs-items .programs-item.green {
-    padding: 20px 15px 170px;
+    padding: 20px 15px 190px;
   }
 }
 .loyalty-programs .wrapper .programs-items .programs-item.green:after {
@@ -4753,7 +4856,7 @@ a:focus {
   width: calc(70% - 140px);
   z-index: -1;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .loyalty-programs .wrapper .programs-items .programs-item.green:after {
     border-width: 50px;
     width: calc(80% - 140px);

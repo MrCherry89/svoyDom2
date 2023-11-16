@@ -837,10 +837,18 @@
     margin-right: 10px;
     margin-bottom: 12px;
     min-width: 122px;
+    @media (max-width: 1300px) {
+      flex-grow: 1;
+      min-width: 180px;
+    }
+    @media (max-width: 1024px) {
+      min-width: 130px;
+    }
     @media (max-width: 767px) {
       margin: 0;
       width: calc((100% - 15px) / 2);
       margin-bottom: 15px;
+      flex-grow: 0;
       &.full {
         width: 100%;
       }
@@ -2386,8 +2394,10 @@
       grid-template-columns: 1fr 1fr;
       gap: 30px;
       @media (max-width: 1024px) {
+        gap: 15px;
+      }
+      @media (max-width: 767px) {
         grid-template-columns: 1fr;
-        gap: 16px;
       }
       .programs-item {
         border-radius: 10px;
@@ -2447,7 +2457,7 @@
           background: $green;
           position: relative;
           @media (max-width: 1024px) {
-            padding: 20px 15px 170px;
+            padding: 20px 15px 190px;
           }
           &:after {
             content: "";
@@ -2459,7 +2469,7 @@
             height: 100px;
             width: calc(70% - 140px);
             z-index: -1;
-            @media (max-width: 767px) {
+            @media (max-width: 1024px) {
               border-width: 50px;
               width: calc(80% - 140px);
             }

@@ -905,6 +905,13 @@ a {
       }
     }
   }
+  &.fix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+  }
 }
 
 .tab-menu {
@@ -1458,6 +1465,11 @@ a {
     padding-top: 130vh;
     margin-top: -100vh;
     transition: background-color 1s ease;
+    @media (max-width: 1024px) {
+      height: auto;
+      margin-top: 0;
+      padding-top: 0;
+    }
   }
   .info {
     width: 100%;
@@ -1467,32 +1479,66 @@ a {
     @include align-center;
     padding: 40px 20px;
     transition: background-color 1s ease;
+    @media (max-width: 1024px) {
+      @include dir-col;
+      align-items: center;
+      min-height: auto;
+    }
     &.info1 {
+      @media (max-width: 1024px) {
+        padding-top: 150px;
+      }
     }
     &.info2 {
       flex-direction: row-reverse;
+      @media (max-width: 1024px) {
+        @include dir-col;
+        align-items: center;
+        min-height: auto;
+      }
     }
     &.info3 {
+      @media (max-width: 1024px) {
+        padding-bottom: 20px;
+      }
     }
     &.info4 {
       flex-direction: row-reverse;
+      @media (max-width: 1024px) {
+        @include dir-col;
+        align-items: center;
+        min-height: auto;
+      }
     }
   }
 
   .text-wrap {
     padding: 0 10px;
     width: 43%;
+    @media (max-width: 1024px) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      text-align: center;
+    }
     h2 {
       font-size: 4vw;
       color: white;
       font-weight: 600;
       margin-bottom: 20px;
+      @media (max-width: 767px) {
+        font-size: 28px;
+      }
     }
     h3 {
       font-size: 1.2vw;
       font-weight: 600;
       color: #ededed;
       margin-bottom: 24px;
+      @media (max-width: 767px) {
+        font-size: 22px;
+      }
     }
     p {
       font-size: 1vw;
@@ -1501,6 +1547,10 @@ a {
       color: white;
       margin-bottom: 20px;
       max-width: 670px;
+      @media (max-width: 767px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
   }
   .img-wrap {
@@ -1508,6 +1558,10 @@ a {
     @include align-center;
     padding: 0 10px;
     width: 40%;
+    @media (max-width: 767px) {
+      width: 100%;
+      max-width: 470px;
+    }
     img {
       max-width: 100%;
       max-height: 100%;

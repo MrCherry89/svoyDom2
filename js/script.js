@@ -266,11 +266,13 @@ $(document).ready(function () {
     onComplete: function () {
       $(".gsap-wrapper").addClass("hidden");
       $(".animate-wrap").addClass("visible");
+      $(".header").removeClass("fix");
     },
     onUpdate: function () {
       if ($(".gsap-wrapper").hasClass("hidden")) {
         $(".gsap-wrapper").removeClass("hidden");
         $(".animate-wrap").removeClass("visible");
+        $(".header").addClass("fix");
       }
     },
   });
