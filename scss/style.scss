@@ -1068,60 +1068,60 @@
     margin-bottom: 20px;
   }
   .wrapper {
-    .breadcrumbs-menu {
-      @include flex;
-      @include flex-wrap;
-      overflow: hidden;
-      li {
-        margin-right: 22px;
-        margin-bottom: 15px;
-        position: relative;
-        z-index: 0;
-        @media (max-width: 767px) {
-          margin-bottom: 10px;
+  }
+  .breadcrumbs-menu {
+    @include flex;
+    @include flex-wrap;
+    overflow: hidden;
+    li {
+      margin-right: 22px;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 0;
+      @media (max-width: 767px) {
+        margin-bottom: 10px;
+      }
+      &:after {
+        content: "";
+        background: url(../img/arr-right.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        position: absolute;
+        top: 50%;
+        margin-top: -4px;
+        left: -15px;
+        width: 7px;
+        height: 11px;
+      }
+      &:first-child {
+        &:after {
+          content: none;
         }
+      }
+      &:last-child {
         &:after {
           content: "";
-          background: url(../img/arr-right.svg);
+          background: url(../img/arr-right-green.svg);
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center center;
           position: absolute;
           top: 50%;
           margin-top: -4px;
-          left: -15px;
+          right: -15px;
           width: 7px;
           height: 11px;
         }
-        &:first-child {
-          &:after {
-            content: none;
-          }
-        }
-        &:last-child {
-          &:after {
-            content: "";
-            background: url(../img/arr-right-green.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            position: absolute;
-            top: 50%;
-            margin-top: -4px;
-            right: -15px;
-            width: 7px;
-            height: 11px;
-          }
-        }
-        a {
-          font-size: 14px;
-          color: #a5a5a5;
-        }
-        span {
-          font-size: 14px;
-          color: $green;
-          font-weight: 500;
-        }
+      }
+      a {
+        font-size: 14px;
+        color: #a5a5a5;
+      }
+      span {
+        font-size: 14px;
+        color: $green;
+        font-weight: 500;
       }
     }
   }

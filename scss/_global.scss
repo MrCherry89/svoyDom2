@@ -911,6 +911,19 @@ a {
     left: 0;
     z-index: 100;
     width: 100%;
+    animation: opacity 1s;
+    .breadcrumbs-wrap {
+      margin-top: 20px;
+    }
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
