@@ -1051,7 +1051,7 @@ a:focus {
   left: 0;
   z-index: 100;
   width: 100%;
-  animation: opacity 0.3s;
+  animation: opacity 0s;
 }
 .header.fix .breadcrumbs-wrap {
   margin-top: 20px;
@@ -1856,7 +1856,7 @@ a:focus {
 }
 
 .color-violet {
-  background: #008b3b;
+  background: #0e6131;
 }
 
 .color-indigo {
