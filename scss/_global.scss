@@ -1527,7 +1527,7 @@ a {
 
   .text-wrap {
     padding: 0 10px;
-    width: 43%;
+    width: 47%;
     @media (max-width: 1024px) {
       margin-bottom: 20px;
     }
@@ -1545,21 +1545,26 @@ a {
       }
     }
     h3 {
-      font-size: 1.2vw;
+      font-size: 1.4vw;
       font-weight: 600;
       color: #ededed;
       margin-bottom: 24px;
+      @media (max-width: 1200px) {
+        font-size: 1.6vw;
+      }
       @media (max-width: 767px) {
         font-size: 22px;
       }
     }
     p {
-      font-size: 1vw;
+      font-size: 1.2vw;
       line-height: 150%;
       font-weight: 400;
       color: white;
       margin-bottom: 20px;
-      max-width: 670px;
+      @media (max-width: 1200px) {
+        font-size: 1.4vw;
+      }
       @media (max-width: 767px) {
         font-size: 14px;
         line-height: 20px;
