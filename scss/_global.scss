@@ -905,6 +905,10 @@ a {
       }
     }
   }
+  &.fixed-header {
+    position: fixed;
+    opacity: 0;
+  }
   &.fix {
     position: fixed;
     top: 0;
@@ -912,8 +916,10 @@ a {
     z-index: 100;
     width: 100%;
     animation: opacity 0s;
+    opacity: 1;
     .breadcrumbs-wrap {
       margin-top: 20px;
+      padding-left: 20px;
     }
   }
 }

@@ -1045,6 +1045,10 @@ a:focus {
   content: "";
   background: url(../img/location-green.svg);
 }
+.header.fixed-header {
+  position: fixed;
+  opacity: 0;
+}
 .header.fix {
   position: fixed;
   top: 0;
@@ -1052,9 +1056,11 @@ a:focus {
   z-index: 100;
   width: 100%;
   animation: opacity 0s;
+  opacity: 1;
 }
 .header.fix .breadcrumbs-wrap {
   margin-top: 20px;
+  padding-left: 20px;
 }
 
 @keyframes opacity {
