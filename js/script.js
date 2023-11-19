@@ -278,7 +278,7 @@ $(document).ready(function () {
   });
 
   $(window).scroll(function () {
-    var sticky = $(".header"),
+    var sticky = $(".header.fixed"),
       scroll = $(window).scrollTop();
 
     if (scroll >= 10) sticky.removeClass("fix");
