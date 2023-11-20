@@ -837,9 +837,9 @@
     margin-right: 10px;
     margin-bottom: 12px;
     min-width: 122px;
+    flex-grow: 1;
     @media (max-width: 1300px) {
-      flex-grow: 1;
-      min-width: 180px;
+      min-width: 280px;
     }
     @media (max-width: 1024px) {
       min-width: 130px;
@@ -900,7 +900,8 @@
   .banner-slider {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 15px;
+    gap: 20px;
+
     @media (max-width: 1200px) {
       grid-template-columns: 1fr 1fr;
     }
@@ -2370,6 +2371,8 @@
         }
         a {
           margin: 0 6px;
+          font-weight: 600;
+          color: $lGreen;
           @media (max-width: 767px) {
             margin: 0;
             margin-top: 16px;
@@ -2430,10 +2433,14 @@
           width: 100%;
         }
         h3 {
-          font-size: 24px;
-          font-weight: 600;
+          font-size: 32px;
+          font-weight: 700;
+          text-transform: uppercase;
           margin-bottom: 10px;
           color: #000;
+          @media (max-width: 767px) {
+            font-size: 28px;
+          }
         }
         p {
           max-width: 560px;
@@ -2507,6 +2514,9 @@
   }
   .wrapper {
     .title-wrapper {
+      @include flex;
+      @include justify-between;
+      @include align-center;
       margin-bottom: 30px;
       .date {
         font-size: 14px;
@@ -2540,6 +2550,40 @@
   }
 }
 
+.swiper-buttons {
+  @include flex;
+  @include justify-between;
+  width: 90px;
+  @media (max-width: 767px) {
+    display: none;
+  }
+  button {
+    position: static;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    @include flex;
+    padding: 0;
+    border-radius: 34px;
+    background: #e4e4e4;
+    &:hover {
+      background: darken(#e4e4e4, 3%);
+    }
+    img {
+      margin: auto;
+      transition: 0.3s;
+    }
+    &.swiper-button-next {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+    &:after {
+      content: none;
+    }
+  }
+}
+
 .swiper-pagination {
   display: none;
   @media (max-width: 1024px) {
@@ -2568,6 +2612,7 @@
   .swiper-wrapper {
     margin-bottom: 30px;
   }
+
   > .text {
     width: 100%;
     font-size: 16px;

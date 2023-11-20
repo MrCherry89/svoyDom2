@@ -1552,7 +1552,7 @@ a:focus {
   }
 }
 .faq-wrap .wrapper .tab-wrap .tabs-menu li a span {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   color: #a5a5a5;
 }
@@ -2891,11 +2891,11 @@ a:focus {
   margin-right: 10px;
   margin-bottom: 12px;
   min-width: 122px;
+  flex-grow: 1;
 }
 @media (max-width: 1300px) {
   .apartment-search-info .select-wrap {
-    flex-grow: 1;
-    min-width: 180px;
+    min-width: 280px;
   }
 }
 @media (max-width: 1024px) {
@@ -2964,7 +2964,7 @@ a:focus {
 .banner-slider-wrap .banner-slider {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 15px;
+  gap: 20px;
 }
 @media (max-width: 1200px) {
   .banner-slider-wrap .banner-slider {
@@ -4757,6 +4757,8 @@ a:focus {
 }
 .about-info .wrapper .about-info-wrap .about-buttons a {
   margin: 0 6px;
+  font-weight: 600;
+  color: #008b3b;
 }
 @media (max-width: 767px) {
   .about-info .wrapper .about-info-wrap .about-buttons a {
@@ -4836,10 +4838,16 @@ a:focus {
   width: 100%;
 }
 .loyalty-programs .wrapper .programs-items .programs-item h3 {
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 10px;
   color: #000;
+}
+@media (max-width: 767px) {
+  .loyalty-programs .wrapper .programs-items .programs-item h3 {
+    font-size: 28px;
+  }
 }
 .loyalty-programs .wrapper .programs-items .programs-item p {
   max-width: 560px;
@@ -4923,6 +4931,15 @@ a:focus {
   }
 }
 .global-slider-wrap .wrapper .title-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 30px;
 }
 .global-slider-wrap .wrapper .title-wrapper .date {
@@ -4961,6 +4978,46 @@ a:focus {
     max-width: 470px;
     width: 100%;
   }
+}
+
+.swiper-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 90px;
+}
+@media (max-width: 767px) {
+  .swiper-buttons {
+    display: none;
+  }
+}
+.swiper-buttons button {
+  position: static;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  border-radius: 34px;
+  background: #e4e4e4;
+}
+.swiper-buttons button:hover {
+  background: gainsboro;
+}
+.swiper-buttons button img {
+  margin: auto;
+  transition: 0.3s;
+}
+.swiper-buttons button.swiper-button-next img {
+  transform: rotate(180deg);
+}
+.swiper-buttons button:after {
+  content: none;
 }
 
 .swiper-pagination {

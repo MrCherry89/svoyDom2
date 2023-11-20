@@ -49,7 +49,7 @@
               <div class="select-wrap lang">
                 <select>
                   <option value="1">Ру</option>
-                  <option value="2">Kz</option>
+                  <option value="2">Кз</option>
                 </select>
               </div>
             </div>
@@ -168,17 +168,27 @@
     <div class="global-slider-wrap mt0">
       <div class="wrapper">
         <div class="title-wrapper">
-          <time class="date">12.11.2023</time>
-          <h2
-            class="main-title"
-            data-aos="fade-right"
-            data-aos-offset="-100"
-            data-aos-delay="100"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-          >
-            Галерея счастья
-          </h2>
+          <div class="wrap">
+            <time class="date">12.11.2023</time>
+            <h2
+              class="main-title"
+              data-aos="fade-right"
+              data-aos-offset="-100"
+              data-aos-delay="100"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              Галерея счастья
+            </h2>
+          </div>
+          <div class="swiper-buttons">
+            <button type="button" class="swiper-button-prev">
+              <img src="img/slider-arrow.svg" alt="" />
+            </button>
+            <button type="button" class="swiper-button-next">
+              <img src="img/slider-arrow.svg" alt="" />
+            </button>
+          </div>
         </div>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
@@ -546,6 +556,10 @@
         },
         pagination: {
           el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
         breakpoints: {
           1025: {
