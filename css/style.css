@@ -315,6 +315,10 @@ a:focus {
   }
 }
 
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #4f4f4f;
+}
+
 .select2-container--default .select2-results__option[aria-selected=true] {
   background: white;
   color: #4f4f4f;
@@ -420,6 +424,10 @@ a:focus {
   border: none;
 }
 
+.select2-search {
+  display: none;
+}
+
 .select2-results__option {
   font-weight: 400;
   padding: 0 15px;
@@ -471,6 +479,35 @@ a:focus {
     text-align: center;
   }
 }
+.current-projects .wrapper .title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .current-projects .wrapper .title-wrap {
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.current-projects .wrapper .title-wrap > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+@media (max-width: 767px) {
+  .current-projects .wrapper .title-wrap > span {
+    margin-top: 15px;
+  }
+}
 .current-projects .wrapper .grey-btn {
   margin-top: 24px;
 }
@@ -504,6 +541,8 @@ a:focus {
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid #e4e4e4;
+  position: relative;
+  z-index: 0;
 }
 @media (max-width: 767px) {
   .current-projects .wrapper .projects-items .projects-item {
@@ -511,6 +550,18 @@ a:focus {
     margin: 0 auto;
     width: 100%;
   }
+}
+.current-projects .wrapper .projects-items .projects-item .count {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  border-radius: 5px;
+  background: #ffca0f;
+  padding: 5px 10px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
 }
 .current-projects .wrapper .projects-items .projects-item .img-wrap {
   display: -webkit-box;
@@ -555,6 +606,40 @@ a:focus {
   .current-projects .wrapper .projects-items .projects-item .text-wrap b {
     font-size: 18px;
   }
+}
+.current-projects .wrapper .projects-items .projects-item .text-wrap p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+.current-projects .wrapper .projects-items .projects-item .text-wrap p span {
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  margin-right: 20px;
+  color: #4f4f4f;
+  font-size: 16px;
+  white-space: nowrap;
+}
+@media (max-width: 1400px) {
+  .current-projects .wrapper .projects-items .projects-item .text-wrap p span {
+    font-size: 14px;
+  }
+}
+.current-projects .wrapper .projects-items .projects-item .text-wrap p span:last-child {
+  margin-right: 0;
+}
+.current-projects .wrapper .projects-items .projects-item .text-wrap p span:last-child:after {
+  content: none;
+}
+.current-projects .wrapper .projects-items .projects-item .text-wrap p span:after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  width: 1px;
+  height: 100%;
+  background: #d7d7d7;
 }
 .current-projects .wrapper .projects-items .projects-item .text-wrap span {
   margin-bottom: 10px;
@@ -1471,8 +1556,14 @@ a:focus {
     height: 10px;
   }
 }
-.accordion-list li .item-heading .icon.minus:after {
-  background-image: url(../img/minus.png);
+.accordion-list li .item-heading:hover .icon {
+  background: #0e6131;
+}
+.accordion-list li .item-heading:hover .icon:after {
+  content: "";
+  background-image: url(../img/plus-icon-white.svg);
+  width: 16px;
+  height: 16px;
 }
 .accordion-list li .item-body {
   padding: 20px;
@@ -2890,7 +2981,7 @@ a:focus {
 .apartment-search-info .select-wrap {
   margin-right: 10px;
   margin-bottom: 12px;
-  min-width: 122px;
+  min-width: 124px;
   flex-grow: 1;
 }
 @media (max-width: 1300px) {
@@ -2914,8 +3005,26 @@ a:focus {
     width: 100%;
   }
 }
+.apartment-search-info .select-wrap.full-mobile {
+  min-width: 190px;
+  flex-grow: 0;
+}
+@media (max-width: 1024px) {
+  .apartment-search-info .select-wrap.full-mobile {
+    min-width: 160px;
+  }
+}
 .apartment-search-info .select-wrap.full {
-  min-width: 185px;
+  min-width: 180px;
+  width: 180px;
+}
+@media (max-width: 767px) {
+  .apartment-search-info .select-wrap.full {
+    width: 100%;
+  }
+}
+.apartment-search-info .select-wrap.full .select2-selection__rendered {
+  padding-right: 0;
 }
 @media (max-width: 767px) {
   .apartment-search-info .select-wrap .select2-container .select2-selection--single .select2-selection__rendered {
@@ -3418,11 +3527,19 @@ a:focus {
 }
 .contact-wrap .wrapper .info .main-title {
   line-height: 90%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+@media (max-width: 1024px) {
+  .contact-wrap .wrapper .info .main-title {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 767px) {
   .contact-wrap .wrapper .info .main-title {
     line-height: 100%;
+    margin-top: 0;
   }
 }
 .contact-wrap .wrapper .info .contact-info {
@@ -3480,7 +3597,13 @@ a:focus {
   width: 55%;
   border-radius: 10px;
   overflow: hidden;
-  margin-top: -120px;
+  margin-top: -180px;
+}
+@media (max-width: 1024px) {
+  .contact-wrap .wrapper .info #map2,
+.contact-wrap .wrapper .info #map {
+    margin-top: -160px;
+  }
 }
 @media (max-width: 767px) {
   .contact-wrap .wrapper .info #map2,
@@ -3684,7 +3807,7 @@ a:focus {
 }
 .apartments-wrap .wrapper .apartment-search-info .tab-menu {
   margin-left: auto;
-  margin-top: auto;
+  margin-top: 10px;
   margin-right: 20px;
 }
 @media (max-width: 767px) {
@@ -4757,8 +4880,8 @@ a:focus {
 }
 .about-info .wrapper .about-info-wrap .about-buttons a {
   margin: 0 6px;
-  font-weight: 600;
-  color: #008b3b;
+  font-weight: 500;
+  color: #141414;
 }
 @media (max-width: 767px) {
   .about-info .wrapper .about-info-wrap .about-buttons a {
@@ -4767,7 +4890,8 @@ a:focus {
   }
 }
 .about-info .wrapper .about-info-wrap .about-buttons a:hover {
-  color: #008b3b;
+  color: white;
+  background: #d4be4f;
 }
 
 .loyalty-programs {
@@ -4838,11 +4962,15 @@ a:focus {
   width: 100%;
 }
 .loyalty-programs .wrapper .programs-items .programs-item h3 {
-  font-size: 32px;
+  font-size: 44px;
   font-weight: 700;
-  text-transform: uppercase;
   margin-bottom: 10px;
   color: #000;
+}
+@media (max-width: 1200px) {
+  .loyalty-programs .wrapper .programs-items .programs-item h3 {
+    font-size: 32px;
+  }
 }
 @media (max-width: 767px) {
   .loyalty-programs .wrapper .programs-items .programs-item h3 {

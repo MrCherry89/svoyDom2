@@ -36,6 +36,48 @@ $(document).ready(function () {
     minimumResultsForSearch: 6,
   });
 
+  $("#select1").select2({
+    placeholder: "Жилой комплекс",
+    minimumResultsForSearch: -1,
+    // allowClear: true,
+  });
+
+  $("#select2").select2({
+    placeholder: "Блок",
+    minimumResultsForSearch: -1,
+    // allowClear: true,
+  });
+
+  $("#select3").select2({
+    placeholder: "Подъезд",
+    minimumResultsForSearch: -1,
+    // allowClear: true,
+  });
+
+  $("#select4").select2({
+    placeholder: "Этаж",
+    minimumResultsForSearch: -1,
+    // allowClear: true,
+  });
+
+  $("#select5").select2({
+    placeholder: "1-10 ком",
+    minimumResultsForSearch: -1,
+    // allowClear: true,
+  });
+
+  $("#select6").select2({
+    placeholder: "Сортировать",
+    minimumResultsForSearch: -1,
+    // allowClear: true,
+  });
+
+  $("#select7").select2({
+    placeholder: "Город",
+    minimumResultsForSearch: -1,
+    // allowClear: true,
+  });
+
   $(".main-menu li button").on("click", function () {
     $(this).closest("li").find(".sub-menu").toggleClass("open");
   });

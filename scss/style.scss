@@ -836,7 +836,7 @@
   .select-wrap {
     margin-right: 10px;
     margin-bottom: 12px;
-    min-width: 122px;
+    min-width: 124px;
     flex-grow: 1;
     @media (max-width: 1300px) {
       min-width: 280px;
@@ -853,8 +853,22 @@
         width: 100%;
       }
     }
+    &.full-mobile {
+      min-width: 190px;
+      flex-grow: 0;
+      @media (max-width: 1024px) {
+        min-width: 160px;
+      }
+    }
     &.full {
-      min-width: 185px;
+      min-width: 180px;
+      width: 180px;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      .select2-selection__rendered {
+        padding-right: 0;
+      }
     }
     .select2-container .select2-selection--single .select2-selection__rendered {
       @media (max-width: 767px) {
@@ -1285,9 +1299,15 @@
       width: 100%;
       .main-title {
         line-height: 90%;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        @media (max-width: 1024px) {
+          margin-top: 20px;
+          margin-bottom: 30px;
+        }
         @media (max-width: 767px) {
           line-height: 100%;
+          margin-top: 0;
         }
       }
       .contact-info {
@@ -1329,7 +1349,10 @@
         width: 55%;
         border-radius: 10px;
         overflow: hidden;
-        margin-top: -120px;
+        margin-top: -180px;
+        @media (max-width: 1024px) {
+          margin-top: -160px;
+        }
         @media (max-width: 767px) {
           width: 100%;
           height: 280px;
@@ -1499,7 +1522,7 @@
       }
       .tab-menu {
         margin-left: auto;
-        margin-top: auto;
+        margin-top: 10px;
         margin-right: 20px;
         @media (max-width: 767px) {
           display: none;
@@ -2371,14 +2394,15 @@
         }
         a {
           margin: 0 6px;
-          font-weight: 600;
-          color: $lGreen;
+          font-weight: 500;
+          color: #141414;
           @media (max-width: 767px) {
             margin: 0;
             margin-top: 16px;
           }
           &:hover {
-            color: $lGreen;
+            color: white;
+            background: #d4be4f;
           }
         }
       }
@@ -2433,11 +2457,13 @@
           width: 100%;
         }
         h3 {
-          font-size: 32px;
+          font-size: 44px;
           font-weight: 700;
-          text-transform: uppercase;
           margin-bottom: 10px;
           color: #000;
+          @media (max-width: 1200px) {
+            font-size: 32px;
+          }
           @media (max-width: 767px) {
             font-size: 28px;
           }
