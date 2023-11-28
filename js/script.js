@@ -298,7 +298,7 @@ $(document).ready(function () {
   gsap.to(".text-animate svg", {
     scale: 72,
     duration: 4,
-    x: "30%",
+    x: "27%",
     scrollTrigger: {
       scrub: -1,
       start: "top top",
