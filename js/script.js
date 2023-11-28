@@ -29,6 +29,54 @@ $(document).ready(function () {
     ],
   });
 
+  $(".images-slider").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $(".images-slider-wrap .slider-navigation .slick-prev"),
+    nextArrow: $(".images-slider-wrap .slider-navigation .slick-next"),
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  $(".images-slider2").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $(".images-slider-wrap2 .slider-navigation .slick-prev"),
+    nextArrow: $(".images-slider-wrap2 .slider-navigation .slick-next"),
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
   $(".phone-number-input").inputmask({
     mask: "+7 (999) 999 - 99 - 99",
   });
