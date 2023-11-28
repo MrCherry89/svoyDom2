@@ -1133,6 +1133,7 @@ a:focus {
 .header.fixed-header {
   position: fixed;
   opacity: 0;
+  z-index: -2;
 }
 .header.fix {
   position: fixed;
@@ -1811,6 +1812,11 @@ a:focus {
   padding: 100px 0;
 }
 @media (max-width: 767px) {
+  .animate-wrap .our-winners {
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 767px) {
   .animate-wrap .our-winners .wrapper {
     padding: 0;
   }
@@ -1960,6 +1966,7 @@ a:focus {
 @media (max-width: 767px) {
   .animate-wrap .our-winners .wrapper h2 {
     font-size: 28px;
+    text-align: center;
   }
 }
 .animate-wrap .infos-wrap {
@@ -1972,6 +1979,7 @@ a:focus {
     height: auto;
     margin-top: 0;
     padding-top: 0;
+    min-height: auto;
   }
 }
 .animate-wrap .infos-wrap .tab-menu {
@@ -1991,6 +1999,9 @@ a:focus {
   z-index: -1;
   left: 0;
 }
+.animate-wrap .infos-wrap .tab-menu li {
+  margin: 0;
+}
 .animate-wrap .infos-wrap .tab-menu li button {
   color: #448f63;
   background: none;
@@ -2002,6 +2013,7 @@ a:focus {
 @media (max-width: 767px) {
   .animate-wrap .infos-wrap .tab-menu li button {
     font-size: 0;
+    padding-top: 20px;
   }
 }
 .animate-wrap .infos-wrap .tab-menu li button:after {
@@ -2039,7 +2051,9 @@ a:focus {
 }
 @media (max-width: 767px) {
   .animate-wrap .infos-wrap h2 {
-    font-size: 28px;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
 .animate-wrap .info {
@@ -2078,6 +2092,8 @@ a:focus {
   .animate-wrap .text-wrap {
     width: 100%;
     text-align: center;
+    padding: 0;
+    margin-bottom: 0;
   }
 }
 .animate-wrap .text-wrap h2 {
@@ -2088,7 +2104,7 @@ a:focus {
 }
 @media (max-width: 767px) {
   .animate-wrap .text-wrap h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 .animate-wrap .text-wrap h3 {
@@ -2104,7 +2120,8 @@ a:focus {
 }
 @media (max-width: 767px) {
   .animate-wrap .text-wrap h3 {
-    font-size: 22px;
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 }
 .animate-wrap .text-wrap p {
@@ -2122,7 +2139,7 @@ a:focus {
 @media (max-width: 767px) {
   .animate-wrap .text-wrap p {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 18px;
   }
 }
 .animate-wrap .img-wrap {
@@ -2137,8 +2154,7 @@ a:focus {
 }
 @media (max-width: 767px) {
   .animate-wrap .img-wrap {
-    width: 100%;
-    max-width: 470px;
+    width: 70%;
   }
 }
 .animate-wrap .img-wrap img {
