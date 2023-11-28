@@ -1543,7 +1543,7 @@ a {
   width: 100%;
   height: 100%;
   svg {
-    width: 80vw;
+    width: 100%;
   }
 }
 
@@ -1552,27 +1552,142 @@ a {
   opacity: 0;
   transition: opacity 0s;
   position: relative;
+  padding-top: 400px;
   &.visible {
     opacity: 1;
   }
+  .our-winners {
+    padding: 100px 0;
+    .wrapper {
+      .images {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        .item {
+          position: relative;
+          z-index: 0;
+          @include flex;
+          cursor: pointer;
+          img {
+            width: 100%;
+          }
+          .item-info {
+            position: absolute;
+            bottom: 30px;
+            left: 30px;
+            max-width: 230px;
+            transition: 0.3s;
+            opacity: 0;
+            z-index: 1;
+            @include flex;
+            @include dir-col;
+            img {
+              width: auto;
+              align-self: flex-start;
+              margin-bottom: 10px;
+            }
+            span {
+              color: white;
+              display: block;
+            }
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.3s;
+            opacity: 0;
+            z-index: 0;
+            background: rgba(#012d14, 0.7);
+          }
+          &:hover {
+            &:after {
+              opacity: 1;
+            }
+            .item-info {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      h2 {
+        text-align: center;
+        font-size: 74px;
+        margin: 40px 0;
+        color: white;
+        font-weight: 500;
+      }
+    }
+  }
   .infos-wrap {
-    height: 530vh;
-    padding-top: 130vh;
-    margin-top: -100vh;
+    min-height: 100vh;
+    padding: 100px 0;
     transition: background-color 1s ease;
     @media (max-width: 1024px) {
       height: auto;
       margin-top: 0;
       padding-top: 0;
     }
+    .tab-menu {
+      @include justify-between;
+      position: relative;
+      z-index: 0;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #66bf8b;
+        position: absolute;
+        top: 10px;
+        z-index: -1;
+        left: 0;
+      }
+      li {
+        button {
+          color: #448f63;
+          background: none;
+          position: relative;
+          z-index: 0;
+          padding-top: 40px;
+          padding-left: 0;
+          &:after {
+            content: "";
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #448f63;
+            top: 0px;
+            position: absolute;
+            transition: 0.3s;
+            left: 0;
+          }
+        }
+        &.active {
+          button {
+            color: white;
+            &:after {
+              background: white;
+            }
+          }
+        }
+      }
+    }
+    h2 {
+      font-size: 74px;
+      margin-bottom: 50px;
+      color: white;
+      font-weight: 500;
+    }
   }
   .info {
     width: 100%;
-    min-height: 100vh;
     @include flex;
     @include justify-center;
     @include align-center;
-    padding: 40px 20px;
     transition: background-color 1s ease;
     @media (max-width: 1024px) {
       @include dir-col;
@@ -1606,7 +1721,6 @@ a {
       }
     }
   }
-
   .text-wrap {
     padding: 0 10px;
     width: 47%;

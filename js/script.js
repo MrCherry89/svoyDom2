@@ -298,7 +298,7 @@ $(document).ready(function () {
   gsap.to(".text-animate svg", {
     scale: 72,
     duration: 4,
-    x: "-80vw",
+    x: "30%",
     scrollTrigger: {
       scrub: -1,
       start: "top top",
@@ -326,6 +326,39 @@ $(document).ready(function () {
     if (scroll >= 10) sticky.removeClass("fix");
     else sticky.addClass("fix");
   });
+
+  gsap.to(".our-winners .wrapper", {
+    opacity: 0.4,
+    scale: 0.4,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".animate-wrap",
+      scrub: -1,
+      start: "top top",
+    },
+  });
+
+  // gsap.to(".our-winners .wrapper h2", {
+  //   // y: "50%",
+  //   scale: 0.5,
+  //   duration: 1,
+  //   scrollTrigger: {
+  //     trigger: ".animate-wrap",
+  //     scrub: -1,
+  //     start: "top top",
+  //   },
+  // });
+
+  // gsap.to(".our-winners", {
+  //   y: "-50%",
+  //   scale: 0.5,
+  //   duration: 1,
+  //   scrollTrigger: {
+  //     trigger: ".animate-wrap",
+  //     scrub: -1,
+  //     start: "top top",
+  //   },
+  // });
 
   // const main = document.querySelector(".main");
 
