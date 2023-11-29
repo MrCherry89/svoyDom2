@@ -1819,9 +1819,6 @@
       text-overflow: ellipsis;
       @media (max-width: 767px) {
         font-size: 20px;
-        text-overflow: inherit;
-        overflow: visible;
-        white-space: wrap;
       }
     }
   }

@@ -1135,6 +1135,14 @@ a:focus {
   opacity: 0;
   z-index: -2;
 }
+@media (max-width: 1024px) {
+  .header.fixed-header {
+    position: relative !important;
+    z-index: 2 !important;
+    opacity: 1 !important;
+    margin-bottom: 15px !important;
+  }
+}
 .header.fix {
   position: fixed;
   top: 0;
@@ -1146,7 +1154,6 @@ a:focus {
 }
 .header.fix .breadcrumbs-wrap {
   margin-top: 20px;
-  padding-left: 20px;
 }
 
 @keyframes opacity {
@@ -1770,6 +1777,11 @@ a:focus {
   width: 100%;
   position: relative;
 }
+@media (max-width: 1024px) {
+  .gsap-wrapper {
+    display: none;
+  }
+}
 .gsap-wrapper .hidden {
   opacity: 0;
   z-index: -1;
@@ -1798,6 +1810,14 @@ a:focus {
   width: 100%;
 }
 
+.main .breadcrumbs-wrap {
+  margin: 0 !important;
+}
+.main .breadcrumbs-wrap .wrapper {
+  padding: 20px;
+  padding-bottom: 0;
+}
+
 .animate-wrap {
   background: #0e6131;
   opacity: 0;
@@ -1805,15 +1825,47 @@ a:focus {
   position: relative;
   padding-top: 400px;
 }
+@media (max-width: 1024px) {
+  .animate-wrap {
+    padding-top: 15px;
+    background: #fff;
+  }
+}
+@media (max-width: 1024px) {
+  .animate-wrap > .wrapper {
+    background: #075126;
+  }
+}
+.animate-wrap .animate-title-mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .animate-wrap .animate-title-mobile {
+    display: block;
+  }
+}
+.animate-wrap .animate-title-mobile h3 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.animate-wrap .animate-title-mobile span {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
 .animate-wrap.visible {
   opacity: 1;
 }
 .animate-wrap .our-winners {
   padding: 100px 0;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .animate-wrap .our-winners {
-    padding-bottom: 50px;
+    padding: 0;
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 767px) {
@@ -1832,6 +1884,10 @@ a:focus {
     padding: 0 30px;
   }
 }
+.animate-wrap .our-winners .wrapper .images-slider-wrap .slick-dots,
+.animate-wrap .our-winners .wrapper .images-slider-wrap2 .slick-dots {
+  bottom: -30px;
+}
 .animate-wrap .our-winners .wrapper .images-slider-wrap .slider-navigation button,
 .animate-wrap .our-winners .wrapper .images-slider-wrap2 .slider-navigation button {
   z-index: 100;
@@ -1848,7 +1904,7 @@ a:focus {
 @media (max-width: 767px) {
   .animate-wrap .our-winners .wrapper .images-slider-wrap .slider-navigation button.slick-next,
 .animate-wrap .our-winners .wrapper .images-slider-wrap2 .slider-navigation button.slick-next {
-    right: 0;
+    right: 5px;
   }
 }
 .animate-wrap .our-winners .wrapper .images-slider-wrap .slider-navigation button.slick-prev,
@@ -1858,13 +1914,34 @@ a:focus {
 @media (max-width: 767px) {
   .animate-wrap .our-winners .wrapper .images-slider-wrap .slider-navigation button.slick-prev,
 .animate-wrap .our-winners .wrapper .images-slider-wrap2 .slider-navigation button.slick-prev {
-    left: 0;
+    left: 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .animate-wrap .our-winners .wrapper .images-slider-wrap .slider-navigation button img,
+.animate-wrap .our-winners .wrapper .images-slider-wrap2 .slider-navigation button img {
+    display: none;
   }
 }
 @media (max-width: 767px) {
   .animate-wrap .our-winners .wrapper .images-slider-wrap .slider-navigation button img,
 .animate-wrap .our-winners .wrapper .images-slider-wrap2 .slider-navigation button img {
-    width: 16px;
+    width: 15px;
+  }
+}
+.animate-wrap .our-winners .wrapper .images-slider-wrap .slider-navigation button img.hide,
+.animate-wrap .our-winners .wrapper .images-slider-wrap2 .slider-navigation button img.hide {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .animate-wrap .our-winners .wrapper .images-slider-wrap .slider-navigation button img.hide,
+.animate-wrap .our-winners .wrapper .images-slider-wrap2 .slider-navigation button img.hide {
+    display: inline-block;
+  }
+}
+@media (max-width: 1024px) {
+  .animate-wrap .our-winners .wrapper .images-slider-wrap2 {
+    display: none;
   }
 }
 .animate-wrap .our-winners .wrapper .images-slider .slick-list,
@@ -1960,13 +2037,7 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .animate-wrap .our-winners .wrapper h2 {
-    font-size: 50px;
-  }
-}
-@media (max-width: 767px) {
-  .animate-wrap .our-winners .wrapper h2 {
-    font-size: 28px;
-    text-align: center;
+    display: none;
   }
 }
 .animate-wrap .infos-wrap {
@@ -1976,9 +2047,10 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .animate-wrap .infos-wrap {
+    background: #075126;
     height: auto;
     margin-top: 0;
-    padding-top: 0;
+    padding: 30px 0;
     min-height: auto;
   }
 }
@@ -2002,6 +2074,11 @@ a:focus {
 .animate-wrap .infos-wrap .tab-menu li {
   margin: 0;
 }
+@media (max-width: 767px) {
+  .animate-wrap .infos-wrap .tab-menu li:last-child {
+    margin-right: 10px;
+  }
+}
 .animate-wrap .infos-wrap .tab-menu li button {
   color: #448f63;
   background: none;
@@ -2012,8 +2089,9 @@ a:focus {
 }
 @media (max-width: 767px) {
   .animate-wrap .infos-wrap .tab-menu li button {
-    font-size: 0;
-    padding-top: 20px;
+    font-size: 12px;
+    padding: 5px;
+    padding-top: 40px;
   }
 }
 .animate-wrap .infos-wrap .tab-menu li button:after {
@@ -2033,6 +2111,9 @@ a:focus {
 .animate-wrap .infos-wrap .tab-menu li.active button:after {
   background: white;
 }
+.animate-wrap .infos-wrap .tab-menu li.active button span {
+  color: white;
+}
 .animate-wrap .infos-wrap h2 {
   font-size: 74px;
   margin-bottom: 50px;
@@ -2046,14 +2127,14 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .animate-wrap .infos-wrap h2 {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 @media (max-width: 767px) {
   .animate-wrap .infos-wrap h2 {
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 }
 .animate-wrap .info {
@@ -2104,7 +2185,10 @@ a:focus {
 }
 @media (max-width: 767px) {
   .animate-wrap .text-wrap h2 {
-    font-size: 26px;
+    font-size: 28px;
+    text-align: left;
+    width: 80%;
+    margin-bottom: 12px;
   }
 }
 .animate-wrap .text-wrap h3 {
@@ -2122,6 +2206,8 @@ a:focus {
   .animate-wrap .text-wrap h3 {
     font-size: 16px;
     margin-bottom: 10px;
+    text-align: left;
+    font-weight: normal;
   }
 }
 .animate-wrap .text-wrap p {
@@ -2139,7 +2225,8 @@ a:focus {
 @media (max-width: 767px) {
   .animate-wrap .text-wrap p {
     font-size: 14px;
-    line-height: 18px;
+    line-height: 17px;
+    text-align: left;
   }
 }
 .animate-wrap .img-wrap {
@@ -4366,9 +4453,6 @@ a:focus {
 @media (max-width: 767px) {
   .news-item .text-wrap b {
     font-size: 20px;
-    text-overflow: inherit;
-    overflow: visible;
-    white-space: wrap;
   }
 }
 @media (max-width: 1024px) {
