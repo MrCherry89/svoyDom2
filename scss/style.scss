@@ -1976,6 +1976,9 @@
         @include justify-center;
         margin-top: 20px;
       }
+      li {
+        margin: 0 6px;
+      }
     }
     h1 {
       font-size: 60px;
@@ -2091,6 +2094,18 @@
           }
           &:hover {
             color: #141414;
+          }
+          span {
+            font-size: 24px;
+            font-weight: 600;
+            color: #a5a5a5;
+            margin-left: 3px;
+            @media (max-width: 767px) {
+              font-size: 14px;
+            }
+            @media (max-width: 480px) {
+              display: none;
+            }
           }
         }
       }

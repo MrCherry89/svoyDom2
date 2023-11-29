@@ -1728,10 +1728,12 @@ a:focus {
 
 .tour-3d {
   margin-top: 80px;
+  margin-bottom: 80px;
 }
 @media (max-width: 767px) {
   .tour-3d {
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 .tour-3d .wrapper .title-wrap {
@@ -2119,6 +2121,7 @@ a:focus {
   z-index: 0;
   padding-top: 40px;
   padding-left: 0;
+  border-radius: 0;
 }
 @media (max-width: 767px) {
   .animate-wrap .infos-wrap .tab-menu li button {
@@ -4668,6 +4671,9 @@ a:focus {
     margin-top: 20px;
   }
 }
+.news-info2 .wrapper .social-menu li {
+  margin: 0 6px;
+}
 .news-info2 .wrapper h1 {
   font-size: 60px;
   font-weight: 600;
@@ -4819,6 +4825,22 @@ a:focus {
 }
 .news-info2 .wrapper .big-info .buttons button:hover {
   color: #141414;
+}
+.news-info2 .wrapper .big-info .buttons button span {
+  font-size: 24px;
+  font-weight: 600;
+  color: #a5a5a5;
+  margin-left: 3px;
+}
+@media (max-width: 767px) {
+  .news-info2 .wrapper .big-info .buttons button span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .news-info2 .wrapper .big-info .buttons button span {
+    display: none;
+  }
 }
 
 .our-team {
