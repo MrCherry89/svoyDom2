@@ -55,6 +55,18 @@ $(document).ready(function () {
     ],
   });
 
+  $(window).scroll(function () {
+    var sticky = $(".top-scroll"),
+      scroll = $(window).scrollTop();
+
+    if (scroll >= 200) sticky.addClass("show");
+    else sticky.removeClass("show");
+  });
+
+  $(".top-scroll").smoothScroll({
+    speed: 1000,
+  });
+
   $(".images-slider2").slick({
     dots: false,
     arrows: true,

@@ -2123,7 +2123,7 @@ a:focus {
 @media (max-width: 767px) {
   .animate-wrap .infos-wrap .tab-menu li button {
     font-size: 12px;
-    padding: 5px;
+    padding: 0;
     padding-top: 40px;
   }
 }
@@ -2500,6 +2500,53 @@ a:focus {
 }
 .social-menu li:hover:nth-child(4) a:after {
   background-image: url(../img/social-icon4.svg);
+}
+
+.top-scroll {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+.top-scroll .icon {
+  border-radius: 50%;
+  transition: 0.3s;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #d9d9d9;
+  margin: 0 auto 8px;
+}
+.top-scroll .icon svg {
+  margin: auto;
+  transition: 0.3s;
+  fill: #7d7d7d;
+}
+.top-scroll .text {
+  text-align: center;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #939393;
+}
+@media (max-width: 767px) {
+  .top-scroll .text {
+    display: none;
+  }
+}
+.top-scroll:hover .icon {
+  background: #0e6131;
+}
+.top-scroll:hover .icon svg {
+  fill: white;
+}
+.top-scroll.show {
+  opacity: 1;
 }
 
 .main-menu {
