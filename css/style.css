@@ -844,36 +844,50 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
 }
+@media (max-width: 1200px) {
+  .header .wrapper .header-info {
+    padding: 15px 20px;
+  }
+}
 @media (max-width: 1024px) {
   .header .wrapper .header-info {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
     border-radius: 0;
-    padding: 15px 20px;
     position: relative;
   }
 }
 .header .wrapper .header-info .logo {
-  max-width: 160px;
+  width: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-right: 30px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .header .wrapper .header-info .logo {
     margin-right: 20px;
+    min-width: 150px;
   }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .header .wrapper .header-info .logo {
-    max-width: 120px;
+    width: 130px;
+    min-width: 130px;
+  }
+}
+@media (max-width: 1200px) {
+  .header .wrapper .header-info .logo {
+    width: 100px;
+    min-width: 100px;
+    margin-right: 15px;
   }
 }
 @media (max-width: 1024px) {
   .header .wrapper .header-info .logo {
-    max-width: 110px;
+    width: 110px;
+    min-width: auto;
   }
 }
 .header .wrapper .header-info .logo img {
@@ -919,7 +933,7 @@ a:focus {
 .header .wrapper .header-info .menu-wrap .main-menu {
   margin-bottom: -20px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .header .wrapper .header-info .menu-wrap .main-menu {
     -ms-flex-pack: distribute;
     justify-content: space-around;
@@ -935,14 +949,22 @@ a:focus {
     justify-content: inherit;
   }
 }
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .header .wrapper .header-info .menu-wrap .main-menu li {
     margin-right: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .header .wrapper .header-info .menu-wrap .main-menu li:first-child {
+    margin-top: -3px;
   }
 }
 @media (max-width: 1100px) {
   .header .wrapper .header-info .menu-wrap .main-menu li {
     margin-right: 10px;
+  }
+  .header .wrapper .header-info .menu-wrap .main-menu li:first-child {
+    margin-right: 15px;
   }
 }
 @media (max-width: 1024px) {
@@ -950,9 +972,14 @@ a:focus {
     margin-bottom: 20px;
   }
 }
+@media (max-width: 1200px) {
+  .header .wrapper .header-info .menu-wrap .main-menu li button {
+    font-size: 13px;
+  }
+}
 @media (max-width: 1100px) {
   .header .wrapper .header-info .menu-wrap .main-menu li button {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media (max-width: 1024px) {
@@ -1006,6 +1033,12 @@ a:focus {
   line-height: 15px;
   padding: 9px 20px 11px;
   white-space: nowrap;
+}
+@media (max-width: 1200px) {
+  .header .wrapper .header-info .menu-wrap .btn-wrap .green-btn {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .header .wrapper .header-info .menu-wrap .btn-wrap .select-wrap {
   min-width: 50px;
@@ -2507,6 +2540,21 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
   white-space: nowrap;
+}
+@media (max-width: 1300px) {
+  .main-menu > li a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .main-menu > li a {
+    font-size: 13px;
+  }
+}
+@media (max-width: 1100px) {
+  .main-menu > li a {
+    font-size: 12px;
+  }
 }
 @media (max-width: 1024px) {
   .main-menu > li a {
