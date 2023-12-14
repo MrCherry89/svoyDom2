@@ -422,5 +422,10 @@ $(document).ready(function () {
     })
     .scroll();
 
+  $(".popup").magnificPopup({
+    type: "inline",
+    mainClass: "mfp-fade",
+  });
+
   AOS.init();
 });
