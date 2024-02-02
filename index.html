@@ -92,38 +92,65 @@
 
     <div class="banner-slider-wrap">
       <div class="wrapper">
+        <div class="slider-navigation">
+          <button type="button" class="slick-prev">
+            <svg
+              width="18"
+              height="14"
+              viewBox="0 0 18 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.7749 6.99668L1.22453 7.00189M1.22453 7.00189L6.77636 1.44634M1.22453 7.00189L6.78008 12.5537"
+                stroke="#4F4F4F"
+                stroke-width="1.57242"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <button type="button" class="slick-next">
+            <svg
+              width="18"
+              height="14"
+              viewBox="0 0 18 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M16.7749 6.99668L1.22453 7.00189M1.22453 7.00189L6.77636 1.44634M1.22453 7.00189L6.78008 12.5537"
+                stroke="#4F4F4F"
+                stroke-width="1.57242"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
         <div class="banner-slider">
           <a
             href="#"
             class="item"
-            style="background-image: url(img/banner-item-bg.png)"
+            style="background-image: url(img/banner-img1.png)"
           >
-            <div class="texts">
-              <b>Традиции в новом свете!</b>
-              <span class="persent green">От 13.7%</span>
-            </div>
-            <img src="img/banner-slider-img1.png" alt="" />
           </a>
-          <a href="#" class="item" style="background-image: url(img/bg2.png)">
-            <div class="texts">
-              <b>Cобственная набережная и аллея</b>
-              <span class="persent blue">От 13.7%</span>
-            </div>
-            <img src="img/banner-slider-img2.png" alt="" />
+          <a
+            href="#"
+            class="item"
+            style="background-image: url(img/banner-img2.png)"
+          ></a>
+          <a
+            href="#"
+            class="item"
+            style="background-image: url(img/banner-img3.png)"
+          >
           </a>
-          <a href="#" class="item">
-            <div class="texts">
-              <b>Срок сдачи 24 месяца</b>
-              <span class="persent purple">От 13.7%</span>
-            </div>
-            <img src="img/banner-slider-img3.png" alt="" />
-          </a>
-          <a href="#" class="item">
-            <div class="texts">
-              <b>Срок сдачи 24 месяца</b>
-              <span class="persent blue">От 13.7%</span>
-            </div>
-            <img src="img/banner-slider-img4.png" alt="" />
+          <a
+            href="#"
+            class="item"
+            style="background-image: url(img/banner-img4.png)"
+          >
           </a>
         </div>
       </div>
@@ -144,85 +171,149 @@
           </h2>
         </div>
         <div class="apartment-search-info">
-          <div class="select-wrap border full">
-            <select id="select1">
-              <option></option>
-              <option value="1">Первый</option>
-              <option value="2">Второй</option>
-            </select>
-          </div>
-          <div class="range-info">
-            <div class="inputs">
-              <div class="input-wrap">
-                от
-                <input type="number" min="0" max="200" step="1" id="input1-1" />
-                м<sup>2</sup>
-              </div>
-              <div class="input-wrap">
-                до
-                <input type="number" min="0" max="200" step="1" id="input1-2" />
-                м<sup>2</sup>
+          <form>
+            <div class="info">
+              <span>Выберите ЖК</span>
+              <div class="select-wrap border full">
+                <select id="select1">
+                  <option></option>
+                  <option value="1">Первый</option>
+                  <option value="2">Второй</option>
+                </select>
               </div>
             </div>
-            <div id="range-slider-1"></div>
-          </div>
-          <div class="range-info full">
-            <div class="inputs">
-              <div class="input-wrap">
-                от
-                <input
-                  type="number"
-                  min="0"
-                  max="100000"
-                  step="1"
-                  id="input2-1"
-                />
-                ₸
-              </div>
-              <div class="input-wrap">
-                до
-                <input
-                  type="number"
-                  min="0"
-                  max="100000"
-                  step="1"
-                  id="input2-2"
-                />
-                ₸
+            <div class="info">
+              <span>Город</span>
+              <div class="select-wrap border full">
+                <select>
+                  <option>Шымкент</option>
+                  <option value="1">Астана</option>
+                  <option value="2">Алматы</option>
+                </select>
               </div>
             </div>
-            <div id="range-slider-2"></div>
-          </div>
-          <div class="select-wrap border">
-            <select id="select2">
-              <option></option>
-              <option value="3">Первый</option>
-              <option value="4">Второй</option>
-            </select>
-          </div>
-          <div class="select-wrap border">
-            <select id="select3">
-              <option></option>
-              <option value="2">Первый</option>
-              <option value="3">Второй</option>
-            </select>
-          </div>
-          <div class="select-wrap border">
-            <select id="select4">
-              <option></option>
-              <option value="2">Первый</option>
-              <option value="3">Второй</option>
-            </select>
-          </div>
-          <div class="select-wrap border">
-            <select id="select5">
-              <option></option>
-              <option value="2">Первый</option>
-              <option value="3">Второй</option>
-            </select>
-          </div>
-          <a href="apartments.html" class="green-btn">Поиск</a>
-          <a href="#" class="grey-btn">На карте</a>
+            <div class="info">
+              <span>Цена</span>
+              <div class="range-info full">
+                <div class="inputs">
+                  <div class="input-wrap">
+                    от
+                    <input
+                      type="number"
+                      min="0"
+                      max="100000"
+                      step="1"
+                      id="input2-1"
+                    />
+                    ₸
+                  </div>
+                  <div class="input-wrap">
+                    до
+                    <input
+                      type="number"
+                      min="0"
+                      max="100000"
+                      step="1"
+                      id="input2-2"
+                    />
+                    ₸
+                  </div>
+                </div>
+                <div id="range-slider-2"></div>
+              </div>
+            </div>
+            <div class="info">
+              <span>Блок</span>
+              <div class="select-wrap border small">
+                <select id="select2">
+                  <option></option>
+                  <option value="3">Первый</option>
+                  <option value="4">Второй</option>
+                </select>
+              </div>
+            </div>
+            <div class="info">
+              <span>Комнатность</span>
+              <div class="radios">
+                <div class="radio-wrap">
+                  <input type="radio" id="radio1" name="radio" checked />
+                  <label for="radio1"> 1 </label>
+                </div>
+                <div class="radio-wrap">
+                  <input type="radio" id="radio2" name="radio" />
+                  <label for="radio2"> 2 </label>
+                </div>
+                <div class="radio-wrap">
+                  <input type="radio" id="radio3" name="radio" />
+                  <label for="radio3"> 3 </label>
+                </div>
+                <div class="radio-wrap">
+                  <input type="radio" id="radio4" name="radio" />
+                  <label for="radio4"> 4+ </label>
+                </div>
+              </div>
+            </div>
+            <div class="info">
+              <span>Квадртура</span>
+              <div class="range-info">
+                <div class="inputs">
+                  <div class="input-wrap">
+                    от
+                    <input
+                      type="number"
+                      min="0"
+                      max="200"
+                      step="1"
+                      id="input1-1"
+                    />
+                    м<sup>2</sup>
+                  </div>
+                  <div class="input-wrap">
+                    до
+                    <input
+                      type="number"
+                      min="0"
+                      max="200"
+                      step="1"
+                      id="input1-2"
+                    />
+                    м<sup>2</sup>
+                  </div>
+                </div>
+                <div id="range-slider-1"></div>
+              </div>
+            </div>
+            <div class="info">
+              <span>Этаж</span>
+              <div class="range-info">
+                <div class="inputs">
+                  <div class="input-wrap">
+                    от
+                    <input
+                      type="number"
+                      min="0"
+                      max="200"
+                      step="1"
+                      id="input3-1"
+                    />
+                  </div>
+                  <div class="input-wrap">
+                    до
+                    <input
+                      type="number"
+                      min="0"
+                      max="200"
+                      step="1"
+                      id="input3-2"
+                    />
+                  </div>
+                </div>
+                <div id="range-slider-3"></div>
+              </div>
+            </div>
+            <a href="apartments.html" class="green-btn">Показать</a>
+            <a href="#" class="grey-btn">Сбросить</a>
+          </form>
         </div>
       </div>
     </div>
@@ -848,6 +939,36 @@
       inputs_2.forEach(function (input, handle) {
         input.addEventListener("change", function () {
           rangeSlider_2.noUiSlider.setHandle(handle, this.value);
+        });
+      });
+      // RangeSlider 2 - end
+
+      // RangeSlider 2 - start
+      var rangeSlider_3 = document.getElementById("range-slider-3");
+      var input3_1 = document.getElementById("input3-1");
+      var input3_2 = document.getElementById("input3-2");
+      var inputs_3 = [input3_1, input3_2];
+
+      noUiSlider.create(rangeSlider_3, {
+        start: [1, 12],
+        connect: true,
+        range: {
+          min: 0,
+          max: 12,
+        },
+        format: {
+          to: (v) => v | 0,
+          from: (v) => v | 0,
+        },
+      });
+
+      rangeSlider_3.noUiSlider.on("update", function (values, handle) {
+        inputs_3[handle].value = values[handle];
+      });
+
+      inputs_3.forEach(function (input, handle) {
+        input.addEventListener("change", function () {
+          rangeSlider_3.noUiSlider.setHandle(handle, this.value);
         });
       });
       // RangeSlider 2 - end

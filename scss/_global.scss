@@ -25,6 +25,13 @@ html {
   color: $grey;
 }
 
+body {
+  @include flex;
+  @include dir-col;
+  @include justify-between;
+  min-height: 100vh;
+}
+
 input,
 textarea {
   border: none;
@@ -79,6 +86,31 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.error-wrap {
+  margin-top: 50px;
+  @media (max-width: 767px) {
+    margin-top: 30px;
+  }
+  .wrapper {
+    max-width: 870px;
+    text-align: center;
+    img {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+    .green-btn {
+      @include inline-flex;
+    }
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #252525;
+    }
+  }
 }
 
 .title-wrap {
@@ -652,14 +684,37 @@ a {
   margin: 0;
 }
 
+.radio-wrap {
+  input[type="radio"] {
+    display: none;
+  }
+
+  input:checked + label {
+    background: $green;
+    color: white;
+  }
+
+  label {
+    @include flex;
+    @include align-center;
+    @include justify-center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #e4e4e4;
+    color: #4f4f4f;
+    font-size: 16px;
+    min-width: 50px;
+    cursor: pointer;
+  }
+}
+
 .range-info {
-  margin-right: 12px;
-  margin-bottom: 12px;
-  min-width: 215px;
   position: relative;
   z-index: 0;
   #range-slider-1,
-  #range-slider-2 {
+  #range-slider-2,
+  #range-slider-3 {
     position: absolute;
     bottom: 0;
     left: 5%;
@@ -672,6 +727,7 @@ a {
     @include align-center;
     @include justify-between;
     padding: 0 15px;
+    padding-right: 30px;
     border-radius: 50px;
     height: 50px;
     position: relative;

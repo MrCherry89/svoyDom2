@@ -99,7 +99,7 @@ $(document).ready(function () {
   });
 
   $("#select1").select2({
-    placeholder: "Жилой комплекс",
+    placeholder: "Выберите",
     minimumResultsForSearch: -1,
     // allowClear: true,
   });
@@ -144,44 +144,26 @@ $(document).ready(function () {
     $(this).closest("li").find(".sub-menu").toggleClass("open");
   });
 
-  $bannerSlider = false;
-  function slider() {
-    if ($(window).width() < 1025) {
-      if (!$bannerSlider) {
-        $(".banner-slider").slick({
+  $(".banner-slider").slick({
+    dots: false,
+    arrows: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    infinite: false,
+    prevArrow: $(".banner-slider-wrap .slider-navigation .slick-prev"),
+    nextArrow: $(".banner-slider-wrap .slider-navigation .slick-next"),
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
           dots: true,
           arrows: false,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          variableWidth: true,
           infinite: false,
-          responsive: [
-            {
-              breakpoint: 501,
-              settings: {
-                dots: true,
-                arrows: false,
-                infinite: false,
-                variableWidth: false,
-                slidesToShow: 1,
-              },
-            },
-          ],
-        });
-        $bannerSlider = true;
-      }
-    } else if ($(window).width() > 1025) {
-      if ($bannerSlider) {
-        $(".banner-slider").slick("unslick");
-        $bannerSlider = false;
-      }
-    }
-  }
-
-  slider();
-
-  $(window).on("resize", function () {
-    slider();
+          variableWidth: true,
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   $newsIn = false;
