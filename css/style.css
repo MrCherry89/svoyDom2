@@ -3653,8 +3653,10 @@ a:focus {
 .banner-slider-wrap .wrapper {
   position: relative;
 }
-.banner-slider-wrap .banner-slider {
-  border-radius: 10px;
+@media (max-width: 1024px) {
+  .banner-slider-wrap .wrapper {
+    padding-right: 0;
+  }
 }
 @media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider .slick-dots {
@@ -3662,7 +3664,7 @@ a:focus {
   }
 }
 .banner-slider-wrap .banner-slider .item {
-  border-radius: 10px;
+  border-radius: 20px;
   position: relative;
   height: 36vw;
   background-size: contain;
@@ -3679,7 +3681,10 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider .item {
-    height: 40vw;
+    height: 130px;
+    border-radius: 12px;
+    margin-right: 15px;
+    width: 310px;
   }
 }
 @media (max-width: 1024px) {

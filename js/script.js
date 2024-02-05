@@ -158,6 +158,7 @@ $(document).ready(function () {
         settings: {
           dots: true,
           arrows: false,
+          variableWidth: true,
         },
       },
     ],

@@ -997,16 +997,18 @@
   overflow: hidden;
   .wrapper {
     position: relative;
+    @media (max-width: 1024px) {
+      padding-right: 0;
+    }
   }
   .banner-slider {
-    border-radius: 10px;
     .slick-dots {
       @media (max-width: 1024px) {
         bottom: -35px;
       }
     }
     .item {
-      border-radius: 10px;
+      border-radius: 20px;
       position: relative;
       height: 36vw;
       background-size: contain;
@@ -1017,7 +1019,10 @@
       @include align-center;
       z-index: 0;
       @media (max-width: 1024px) {
-        height: 40vw;
+        height: 130px;
+        border-radius: 12px;
+        margin-right: 15px;
+        width: 310px;
       }
     }
   }
