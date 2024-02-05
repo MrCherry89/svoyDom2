@@ -3653,18 +3653,8 @@ a:focus {
 .banner-slider-wrap .wrapper {
   position: relative;
 }
-@media (max-width: 1440px) {
-  .banner-slider-wrap .wrapper {
-    padding-right: 0;
-  }
-}
-.banner-slider-wrap .banner-slider .slick-list {
-  margin: 0 -10px;
-}
-@media (max-width: 1440px) {
-  .banner-slider-wrap .banner-slider .slick-list {
-    margin: 0;
-  }
+.banner-slider-wrap .banner-slider {
+  border-radius: 10px;
 }
 @media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider .slick-dots {
@@ -3674,8 +3664,8 @@ a:focus {
 .banner-slider-wrap .banner-slider .item {
   border-radius: 10px;
   position: relative;
-  height: 220px;
-  background-size: cover;
+  height: 36vw;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   overflow: hidden;
@@ -3686,13 +3676,10 @@ a:focus {
   -ms-flex-align: center;
   align-items: center;
   z-index: 0;
-  margin: 0 10px;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider .item {
-    width: 340px;
-    margin: 0;
-    margin-right: 20px;
+    height: 40vw;
   }
 }
 @media (max-width: 1024px) {
@@ -3723,7 +3710,7 @@ a:focus {
 }
 @media (max-width: 1600px) {
   .banner-slider-wrap .slider-navigation button.slick-prev {
-    left: 0;
+    left: 20px;
   }
 }
 .banner-slider-wrap .slider-navigation button.slick-next {
@@ -3731,7 +3718,7 @@ a:focus {
 }
 @media (max-width: 1600px) {
   .banner-slider-wrap .slider-navigation button.slick-next {
-    right: 0;
+    right: 20px;
   }
 }
 .banner-slider-wrap .slider-navigation button.slick-next svg {

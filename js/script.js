@@ -147,20 +147,17 @@ $(document).ready(function () {
   $(".banner-slider").slick({
     dots: false,
     arrows: true,
-    slidesToShow: 4,
+    slidesToShow: 1,
     slidesToScroll: 1,
     infinite: false,
     prevArrow: $(".banner-slider-wrap .slider-navigation .slick-prev"),
     nextArrow: $(".banner-slider-wrap .slider-navigation .slick-next"),
     responsive: [
       {
-        breakpoint: 1440,
+        breakpoint: 1025,
         settings: {
           dots: true,
           arrows: false,
-          infinite: false,
-          variableWidth: true,
-          slidesToShow: 1,
         },
       },
     ],

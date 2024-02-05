@@ -997,17 +997,9 @@
   overflow: hidden;
   .wrapper {
     position: relative;
-    @media (max-width: 1440px) {
-      padding-right: 0;
-    }
   }
   .banner-slider {
-    .slick-list {
-      margin: 0 -10px;
-      @media (max-width: 1440px) {
-        margin: 0;
-      }
-    }
+    border-radius: 10px;
     .slick-dots {
       @media (max-width: 1024px) {
         bottom: -35px;
@@ -1016,19 +1008,16 @@
     .item {
       border-radius: 10px;
       position: relative;
-      height: 220px;
-      background-size: cover;
+      height: 36vw;
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
       overflow: hidden;
       @include flex;
       @include align-center;
       z-index: 0;
-      margin: 0 10px;
-      @media (max-width: 1440px) {
-        width: 340px;
-        margin: 0;
-        margin-right: 20px;
+      @media (max-width: 1024px) {
+        height: 40vw;
       }
     }
   }
@@ -1054,13 +1043,13 @@
       &.slick-prev {
         left: -30px;
         @media (max-width: 1600px) {
-          left: 0;
+          left: 20px;
         }
       }
       &.slick-next {
         right: -30px;
         @media (max-width: 1600px) {
-          right: 0;
+          right: 20px;
         }
         svg {
           transform: rotate(180deg);
