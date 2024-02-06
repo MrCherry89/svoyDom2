@@ -5,11 +5,15 @@ html {
 }
 body.overflow,
 html.overflow {
-  overflow: hidden !important;
+  overflow: hidden;
 }
 body.fixed,
 html.fixed {
   overflow: hidden;
+}
+body.hidden,
+html.hidden {
+  overflow-x: hidden;
 }
 
 * {
@@ -3672,7 +3676,6 @@ a:focus {
   }
 }
 .banner-slider-wrap .banner-slider .item {
-  position: relative;
   height: 42vw;
   background-size: contain;
   background-repeat: no-repeat;
@@ -3687,9 +3690,9 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider .item {
-    height: 138px;
+    height: 143px;
     border-radius: 14px;
-    width: 330px;
+    width: 340px;
     margin: 0 5px;
   }
 }
@@ -3699,8 +3702,8 @@ a:focus {
   }
 }
 .banner-slider-wrap .slider-navigation button {
-  width: 40px;
-  height: 40px;
+  width: auto;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

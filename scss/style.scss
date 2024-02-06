@@ -1014,7 +1014,6 @@
       }
     }
     .item {
-      position: relative;
       height: 42vw;
       background-size: contain;
       background-repeat: no-repeat;
@@ -1023,9 +1022,9 @@
       @include flex;
       @include align-center;
       @media (max-width: 1024px) {
-        height: 138px;
+        height: 143px;
         border-radius: 14px;
-        width: 330px;
+        width: 340px;
         margin: 0 5px;
       }
     }
@@ -1035,8 +1034,8 @@
       display: none;
     }
     button {
-      width: 40px;
-      height: 40px;
+      width: auto;
+      height: auto;
       @include flex;
       z-index: 10;
       img {

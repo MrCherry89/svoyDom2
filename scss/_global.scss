@@ -10,10 +10,13 @@ html {
   overflow-x: hidden;
   font-family: $i;
   &.overflow {
-    overflow: hidden !important;
+    overflow: hidden;
   }
   &.fixed {
     overflow: hidden;
+  }
+  &.hidden {
+    overflow-x: hidden;
   }
 }
 
