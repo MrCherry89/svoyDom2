@@ -156,8 +156,22 @@ $(document).ready(function () {
       {
         breakpoint: 1025,
         settings: {
-          dots: true,
           arrows: false,
+          centerMode: true,
+          centerPadding: "10px",
+          slidesToShow: 3,
+          infinite: true,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "10px",
+          slidesToShow: 1,
+          infinite: true,
           variableWidth: true,
         },
       },

@@ -879,6 +879,9 @@
   margin-top: 80px;
   position: relative;
   z-index: 0;
+  @media (max-width: 767px) {
+    margin-top: 50px;
+  }
 }
 
 #popup {
@@ -998,10 +1001,18 @@
   .wrapper {
     position: relative;
     @media (max-width: 1024px) {
-      padding-right: 0;
+      padding: 0;
     }
   }
   .banner-slider {
+    @media (max-width: 1024px) {
+      padding: 0 20px;
+    }
+    .slick-list {
+      @media (max-width: 1024px) {
+        overflow: visible !important;
+      }
+    }
     .slick-dots {
       @media (max-width: 1024px) {
         bottom: -35px;
@@ -1020,9 +1031,9 @@
       z-index: 0;
       @media (max-width: 1024px) {
         height: 130px;
-        border-radius: 12px;
-        margin-right: 15px;
+        border-radius: 14px;
         width: 310px;
+        margin: 0 5px;
       }
     }
   }

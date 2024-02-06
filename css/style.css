@@ -3506,6 +3506,11 @@ a:focus {
   position: relative;
   z-index: 0;
 }
+@media (max-width: 767px) {
+  .apartment-search {
+    margin-top: 50px;
+  }
+}
 
 #popup {
   max-width: 350px;
@@ -3655,7 +3660,17 @@ a:focus {
 }
 @media (max-width: 1024px) {
   .banner-slider-wrap .wrapper {
-    padding-right: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .banner-slider-wrap .banner-slider {
+    padding: 0 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .banner-slider-wrap .banner-slider .slick-list {
+    overflow: visible !important;
   }
 }
 @media (max-width: 1024px) {
@@ -3682,9 +3697,9 @@ a:focus {
 @media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider .item {
     height: 130px;
-    border-radius: 12px;
-    margin-right: 15px;
+    border-radius: 14px;
     width: 310px;
+    margin: 0 5px;
   }
 }
 @media (max-width: 1024px) {
