@@ -876,10 +876,10 @@
 }
 
 .apartment-search {
-  margin-top: 80px;
+  margin-top: 0;
   position: relative;
   z-index: 0;
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     margin-top: 50px;
   }
 }
