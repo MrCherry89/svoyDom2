@@ -999,6 +999,10 @@
 .banner-slider-wrap {
   overflow: hidden;
   position: relative;
+  top: -110px;
+  @media (max-width: 1024px) {
+    top: inherit;
+  }
   .banner-slider {
     @media (max-width: 1024px) {
       padding: 0 20px;
@@ -1038,13 +1042,11 @@
       height: auto;
       @include flex;
       z-index: 10;
+      top: 55%;
       img {
         margin: auto;
         transition: 0.3s;
-        width: 40px;
-        @media (max-width: 1280px) {
-          width: 30px;
-        }
+        width: 28px;
       }
       &:before {
         content: none;

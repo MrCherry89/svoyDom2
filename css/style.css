@@ -3659,6 +3659,12 @@ a:focus {
 .banner-slider-wrap {
   overflow: hidden;
   position: relative;
+  top: -110px;
+}
+@media (max-width: 1024px) {
+  .banner-slider-wrap {
+    top: inherit;
+  }
 }
 @media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider {
@@ -3708,16 +3714,12 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   z-index: 10;
+  top: 55%;
 }
 .banner-slider-wrap .slider-navigation button img {
   margin: auto;
   transition: 0.3s;
-  width: 40px;
-}
-@media (max-width: 1280px) {
-  .banner-slider-wrap .slider-navigation button img {
-    width: 30px;
-  }
+  width: 28px;
 }
 .banner-slider-wrap .slider-navigation button:before {
   content: none;
