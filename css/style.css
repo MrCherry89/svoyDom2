@@ -3654,14 +3654,7 @@ a:focus {
 
 .banner-slider-wrap {
   overflow: hidden;
-}
-.banner-slider-wrap .wrapper {
   position: relative;
-}
-@media (max-width: 1024px) {
-  .banner-slider-wrap .wrapper {
-    padding: 0;
-  }
 }
 @media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider {
@@ -3679,9 +3672,8 @@ a:focus {
   }
 }
 .banner-slider-wrap .banner-slider .item {
-  border-radius: 20px;
   position: relative;
-  height: 36vw;
+  height: 42vw;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -3692,13 +3684,12 @@ a:focus {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  z-index: 0;
 }
 @media (max-width: 1024px) {
   .banner-slider-wrap .banner-slider .item {
-    height: 130px;
+    height: 138px;
     border-radius: 14px;
-    width: 310px;
+    width: 330px;
     margin: 0 5px;
   }
 }
@@ -3710,39 +3701,42 @@ a:focus {
 .banner-slider-wrap .slider-navigation button {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: 10;
-  background: #e4e4e4;
 }
-.banner-slider-wrap .slider-navigation button svg {
+.banner-slider-wrap .slider-navigation button img {
   margin: auto;
   transition: 0.3s;
+  width: 40px;
+}
+@media (max-width: 1280px) {
+  .banner-slider-wrap .slider-navigation button img {
+    width: 30px;
+  }
 }
 .banner-slider-wrap .slider-navigation button:before {
   content: none;
-  font-size: 0;
 }
 .banner-slider-wrap .slider-navigation button.slick-prev {
-  left: -30px;
+  left: 30px;
 }
 @media (max-width: 1600px) {
   .banner-slider-wrap .slider-navigation button.slick-prev {
     left: 20px;
   }
 }
+.banner-slider-wrap .slider-navigation button.slick-prev img {
+  transform: rotate(180deg);
+}
 .banner-slider-wrap .slider-navigation button.slick-next {
-  right: -30px;
+  right: 30px;
 }
 @media (max-width: 1600px) {
   .banner-slider-wrap .slider-navigation button.slick-next {
     right: 20px;
   }
-}
-.banner-slider-wrap .slider-navigation button.slick-next svg {
-  transform: rotate(180deg);
 }
 
 .fixed-block {

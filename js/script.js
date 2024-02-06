@@ -149,6 +149,7 @@ $(document).ready(function () {
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
     infinite: false,
     prevArrow: $(".banner-slider-wrap .slider-navigation .slick-prev"),
     nextArrow: $(".banner-slider-wrap .slider-navigation .slick-next"),
